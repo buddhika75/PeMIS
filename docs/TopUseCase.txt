@@ -1,0 +1,8 @@
+Nurse
+	New Patient
+	Search Patient
+	Charges
+
+Doctor
+	Queue
+	Charges

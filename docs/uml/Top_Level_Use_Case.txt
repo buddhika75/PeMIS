@@ -1,0 +1,11 @@
+//Top Level Use Case Diagram
+[Admin]^[User]
+[Owner]^[User]
+[Receptionist]^[User]
+[FrontOffieManager]^[User]
+[RestournetManager]^[User]
+[StoreKeeper]^[User]
+[Chef]^[User]
+[Cook]^[User]
+[Waiter]^[User]
+

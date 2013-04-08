@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./nurse_index.xhtml">
+
+            <ui:define name="nursecontent">
+
+                <h:form>
+
+                    <p:panel header="Enter Details of new patient">
+                        <h:panelGrid columns="2" >
+                            <h:panelGroup >
+                                <h:graphicImage library="image" name="new_pt.png" styleClass="transparentpic"/>
+                            </h:panelGroup>
+                            <h:panelGroup >
+
+                                <h:form>
+                                    <h:panelGrid columns="2" >
+
+                                        <h:outputLabel value="Name" ></h:outputLabel>
+                                        <h:inputText autocomplete="off"  value="#{patientController.current.person.name}" ></h:inputText>
+
+                                       
+                                        <h:outputLabel value="Date of Birth" ></h:outputLabel>
+                                        <p:calendar id="calDob" pattern="dd MMMM yyyy" value="#{patientController.current.person.dob}" >
+                                            <f:ajax event="dateSelect" execute="calDob"  render="txtAge" />
+                                        </p:calendar>
+                                        
+                                        <h:outputLabel value="Age" />
+                                        <h:outputLabel id="txtAge" value="#{patientController.current.person.age}"></h:outputLabel>
+                                        
+                                        
+                                        
+                                        <h:outputLabel value="Sex" ></h:outputLabel>
+                                        <h:selectOneListbox value="#{patientController.current.person.sex}" >
+                                            <f:selectItems value="#{sexController.items}" var="r" itemLabel="#{r.name}" itemValue="#{r}" />
+                                        </h:selectOneListbox>                                        
+
+                                        
+                                        <h:outputLabel value="Address" ></h:outputLabel>
+                                        <h:inputText value="#{patientController.current.person.address }" ></h:inputText>
+
+                                        <h:outputLabel value="Comments" ></h:outputLabel>
+                                        <h:inputText value="#{patientController.current.person.comments}" ></h:inputText>
+
+                                        <h:outputLabel value="&nbsp;" ></h:outputLabel>
+
+                                        <h:commandButton value="Save" action="#{patientController.saveSelected()}" ></h:commandButton>
+
+
+
+                                    </h:panelGrid>
+                                </h:form>
+
+
+
+                            </h:panelGroup>
+
+                        </h:panelGrid>
+                    </p:panel>
+
+
+
+
+                </h:form>
+
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
