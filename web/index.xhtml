@@ -21,10 +21,16 @@
                             </p:imageSwitch>
                         </h:panelGroup>
                     </h:panelGrid>
-                    <h:panelGrid columnClasses="1" >
+                    <h:panelGrid columns="1" >
+                        <h:panelGrid columns="2">
+                            <h:commandButton rendered="#{!languageBean.inSinhala}" value="#{labels.sinhala}" action="#{languageBean.changeToSinhala()}"></h:commandButton>
+                            <h:commandButton rendered="#{!languageBean.inTamil}"  value="#{labels.tamil}"  action="#{languageBean.changeToTamil()}"></h:commandButton>
+                            <h:commandButton rendered="#{!languageBean.inEnglish}"  value="#{labels.english}"  action="#{languageBean.changeToEnglish()}"></h:commandButton>
+                        </h:panelGrid>
+                    </h:panelGrid>
+                    <h:panelGrid columns="2" >
                         
                     </h:panelGrid>
-                    
                 </h:panelGrid>
             </ui:define>
 

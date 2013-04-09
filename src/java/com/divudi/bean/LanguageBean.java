@@ -26,7 +26,6 @@ import javax.faces.event.ValueChangeEvent;
 @RequestScoped
 public class LanguageBean implements Serializable {
 
-    
     public LanguageBean() {
     }
     @EJB
@@ -36,8 +35,56 @@ public class LanguageBean implements Serializable {
     private static Map<String, Object> countries;
     @ManagedProperty(value = "#{sessionController}")
     private SessionController sessionController;
-@ManagedProperty(value = "#{menu}")
+    @ManagedProperty(value = "#{menu}")
     private Menu menu;
+    Boolean inSinhala;
+    Boolean inTamil;
+    Boolean inEnglish;
+
+    public Boolean getInSinhala() {
+        if (localeCode.equals("si_LK")) {
+            inSinhala = Boolean.TRUE;
+        } else if (localeCode.equals("ta_LK")) {
+            inSinhala = Boolean.FALSE;
+        } else {
+            inSinhala = Boolean.FALSE;
+        }
+        return inSinhala;
+    }
+
+    public void setInSinhala(Boolean inSinhala) {
+        this.inSinhala = inSinhala;
+    }
+
+    public Boolean getInTamil() {
+        if (localeCode.equals("si_LK")) {
+            inTamil = Boolean.FALSE;
+        } else if (localeCode.equals("ta_LK")) {
+            inTamil = Boolean.TRUE;
+        } else {
+            inTamil = Boolean.FALSE;
+        }
+        return inTamil;
+    }
+
+    public void setInTamil(Boolean inTamil) {
+        this.inTamil = inTamil;
+    }
+
+    public Boolean getInEnglish() {
+        if (localeCode.equals("si_LK")) {
+            inEnglish = Boolean.FALSE;
+        } else if (localeCode.equals("ta_LK")) {
+            inEnglish = Boolean.FALSE;
+        } else {
+            inEnglish = Boolean.TRUE;
+        }
+        return inEnglish;
+    }
+
+    public void setInEnglish(Boolean inEnglish) {
+        this.inEnglish = inEnglish;
+    }
 
     static {
         Locale sinhalaLocale = new Locale("si", "LK");
@@ -57,8 +104,6 @@ public class LanguageBean implements Serializable {
         this.menu = menu;
     }
 
-    
-    
     public WebUserFacade getUserFacade() {
         return userFacade;
     }
@@ -102,6 +147,51 @@ public class LanguageBean implements Serializable {
         this.localeCode = localeCode;
     }
 
+    
+    public void changeToSinhala() {
+        localeCode = "si_LK";
+        try {
+            sessionController.loggedUser.setDefLocale(localeCode);
+            userFacade.edit(sessionController.loggedUser);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        Locale myLocale;
+        myLocale = new Locale("si", "LK");
+        FacesContext.getCurrentInstance().getViewRoot().setLocale(myLocale);
+        menu.createMenu();
+    }
+
+    
+        public void changeToTamil() {
+        localeCode = "ta_LK";
+        try {
+            sessionController.loggedUser.setDefLocale(localeCode);
+            userFacade.edit(sessionController.loggedUser);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        Locale myLocale;
+        myLocale = new Locale("ta", "LK");
+        FacesContext.getCurrentInstance().getViewRoot().setLocale(myLocale);
+        menu.createMenu();
+    }
+
+    
+    public void changeToEnglish() {
+        localeCode = "en";
+        try {
+            sessionController.loggedUser.setDefLocale(localeCode);
+            userFacade.edit(sessionController.loggedUser);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        Locale myLocale;
+        myLocale = new Locale("en");
+        FacesContext.getCurrentInstance().getViewRoot().setLocale(myLocale);
+        menu.createMenu();
+    }
+
     public void changeLocale() {
         sessionController.loggedUser.setDefLocale(localeCode);
         userFacade.edit(sessionController.loggedUser);
@@ -117,7 +207,7 @@ public class LanguageBean implements Serializable {
             myLocale = new Locale("en");
         }
         FacesContext.getCurrentInstance().getViewRoot().setLocale(myLocale);
-menu.createMenu();
+        menu.createMenu();
     }
     //value change event listener
 //    public void countryLocaleCodeChanged(ValueChangeEvent e) {
