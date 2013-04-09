@@ -64,6 +64,49 @@ body	{
     font-weight: bolder;
 }
 
+.languagebutton{
+    font-family : "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+    text-align : center;
+    min-width: 240px;
+    max-width: 240px;
+    max-height: 30px;
+    min-height: 30px;
+    background: rgb(153,0,0); 
+    border: 0px;
+    margin: 0px;
+    padding: 1px;
+    font-size: larger;
+    color: rgb(255,240,240);
+    overflow: hidden;
+}
+
+.languagebutton:hover {
+    color: rgb(255,240,0);
+    font-weight: bolder;
+}
+
+.chatbutton{
+    font-family : "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+    text-align : center;
+    min-width: 240px;
+    max-width: 240px;
+    max-height: 30px;
+    min-height: 30px;
+    background: rgb(153,0,0); 
+    border: 0px;
+    margin: 0px;
+    padding: 1px;
+    font-size: larger;
+    color: rgb(255,240,240);
+    overflow: hidden;
+}
+
+.chatbutton:hover {
+    color: rgb(255,240,0);
+    font-weight: bolder;
+}
+
+
 
 .verticalline{
     min-height: 70px;

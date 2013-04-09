@@ -119,7 +119,7 @@ public final class PatientController  implements Serializable {
 
     public String prepareAdd() {
         current = new Patient();
-        return "add_new_patient";
+        return "patient";
     }
 
     public void saveSelected() {
