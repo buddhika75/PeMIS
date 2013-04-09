@@ -16,55 +16,51 @@
 
         <div id="container">
             <div id="header" >
-                
+
+                <div class="headerblocks" style="max-width: 110px;">
+                    <h:graphicImage id="pelogo" library="image" name="pelogo.png" ></h:graphicImage>
+                </div>
+                <div class="headerblocks" style="min-width:340px;" >
+                    <div class="headingdiv">
+                        <h:outputLabel value="#{labels.fomFullName}" class="headerfont"/>
+                    </div>
+                    <div class="headingdiv">
+                        <h:outputLabel value="#{labels.peradeniya}" class="headerfont"/>
+                    </div>
+                </div>
+                <div class="headerblocks" >
+                    <div class="verticalline" >
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="headerblocks" style="max-width: 110px;">
+                    <h:graphicImage id="rxlogo" library="image" name="rx.png" ></h:graphicImage>
+                </div>
+                <div class="headerblocks" style="max-width: 800px; text-align: center;" >
+                    <div class="headingdiv" >
+                        <h:outputLabel value="#{labels.pemis}" class="headerfont"/><br/>
+                        <h:outputLabel value="#{labels.pemisFullName}" class="headerfont"/>
+                    </div>
+                </div>
+
             </div>
             <div id="nav-main">
-                <ul>
-                    <li><a href="/webehr">Home</a></li>
-                    <li><a href="/webehr/faces/doctorview/doctor_index.xhtml">Doctor</a></li>
-                    <li><a href="/webehr/faces/nurseview/nurse_index.xhtml">Nurse</a></li>
-                    <li><a href="/webehr/faces/adminview/admin_index.xhtml">Administrator</a></li>
-                </ul>
-                <br />
+                <h:commandButton value="#{labels.home}" class="topbutton">
+                </h:commandButton>
+                <h:commandButton value="#{labels.public}" class="topbutton">
+                </h:commandButton>
+                <h:commandButton value="#{labels.healthProfessionals}" class="topbutton">
+                </h:commandButton>
+                <h:commandButton value="#{labels.aboutUs}" class="topbutton">
+                </h:commandButton>
+                <h:commandButton value="#{labels.contactUs}" class="topbutton">
+                </h:commandButton>
+
+
             </div>
             <div id="content">
-                <div id="content-left">
-                    <ui:insert name="leftmenu"   >
-                        Contents comes here
-                    </ui:insert>
-                </div>
-
-                <div id="content-right">
-                    <h:panelGroup rendered ="#{sessionController.logged}" >
-                        <ui:insert name="content"   >
-                            Contents comes here
-                        </ui:insert>
-                    </h:panelGroup>
-                    <h:panelGroup rendered ="#{!sessionController.logged}" >
-                        <p:panel header="Please login" id="loginbox">
-                            <h:panelGrid columns="2" >
-                                <h:panelGroup >
-                                    <h:graphicImage  library="image" name="lock.png" />
-                                </h:panelGroup>
-                                <h:panelGroup >
-                                    <h:form>
-                                        <h:panelGrid columns="2">
-
-                                            <h:outputLabel value="Username" ></h:outputLabel>
-                                            <h:inputText autocomplete="off"  value="#{connectionController.userName}" ></h:inputText>
-                                            <h:outputLabel value="Password" ></h:outputLabel>
-                                            <h:inputSecret value="#{connectionController.passord }" ></h:inputSecret>
-                                            <h:outputLabel value="Password" ></h:outputLabel>
-                                            <h:commandButton value="Login" action="#{connectionController.loginAction}" ></h:commandButton>
-
-                                        </h:panelGrid>
-                                    </h:form>
-                                </h:panelGroup>
-
-                            </h:panelGrid>
-                        </p:panel>
-                    </h:panelGroup>                    
-                </div>
+                <ui:insert name="content"   >
+                </ui:insert>
             </div>
 
             <div id="nav-supp">

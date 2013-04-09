@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
 
     <body>
 
@@ -9,7 +11,21 @@
 
            
             <ui:define name="content">
-                My content
+                <h:panelGrid columns="1" >
+                    
+                    <h:panelGrid columns="2" >
+                        <h:panelGroup >
+                            <p:imageSwitch effect="">
+                                <h:graphicImage library="image" name="img1.jpg" />
+                                <h:graphicImage library="image" name="img1.jpg" />
+                            </p:imageSwitch>
+                        </h:panelGroup>
+                    </h:panelGrid>
+                    <h:panelGrid columnClasses="1" >
+                        
+                    </h:panelGrid>
+                    
+                </h:panelGrid>
             </ui:define>
 
 
