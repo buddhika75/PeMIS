@@ -14,7 +14,7 @@ import org.primefaces.model.DefaultMenuModel;
 import org.primefaces.model.MenuModel;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import org.primefaces.component.menuitem.MenuItem;
 
 /**
@@ -23,7 +23,7 @@ import org.primefaces.component.menuitem.MenuItem;
  * Informatics)
  */
 @ManagedBean
-@RequestScoped
+@SessionScoped
 public class Menu implements Serializable {
 
     @ManagedProperty(value = "#{sessionController}")
@@ -32,20 +32,19 @@ public class Menu implements Serializable {
     private MessageProvider messageProvider;
     MenuModel model;
     String temIx = "";
-    
     String activeClass;
     String inactiveClass;
 
-    public String gotoNurse(){
+    public String gotoNurse() {
         return "nurse_index";
-        
+
     }
-    
-    public String gotoDoctor(){
+
+    public String gotoDoctor() {
         return "/nurseview/nurse_index.xhtml";
-        
+
     }
-    
+
     public String getTemIx() {
         return temIx;
     }
@@ -69,10 +68,7 @@ public class Menu implements Serializable {
     public void setInactiveClass(String inactiveClass) {
         this.inactiveClass = inactiveClass;
     }
-    
-    
-    
-    
+
     public MessageProvider getMessageProvider() {
         return messageProvider;
     }

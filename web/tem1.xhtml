@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view locale="#{languageBean.locale}">
+            #{languageBean.locale}
+
+
+            <h:head>
+                <title>JSF/Facelets i18n example</title>
+            </h:head>
+            <h:body>
+                <h:form>
+                    <h:commandButton value="Sinhala" rendered="#{!languageBean.inSinhala}" action="#{languageBean.changeToSinhala()}"/>
+                    <h:commandButton value="Tamil"  rendered="#{!languageBean.inTamil}" ="#{languageBean.changeToTamil()}"/>
+                    <h:commandButton value="English"  rendered="#{!languageBean.inEnglish}" action="#{languageBean.changeToEnglish()}"/>
+
+                    <h:selectOneMenu value="#{languageBean.language}" onchange="submit()">
+                        <f:selectItem itemValue="en" itemLabel="English" />
+                        <f:selectItem itemValue="nl" itemLabel="Nederlands" />
+                        <f:selectItem itemValue="es" itemLabel="Español" />
+                    </h:selectOneMenu>
+                </h:form>
+                <p><h:outputText value="#{text['some.text']}" /></p>
+            </h:body>
+        </f:view>
+
+    </h:body>
+</html>
+

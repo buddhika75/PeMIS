@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8' ?> 
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -64,12 +64,7 @@
             </div>
 
             <div id="nav-supp">
-                <h:form>
-                    <h:outputLabel  value="You are logged as #{sessionController.loggedUser.webUserPerson.name}&nbsp;(#{sessionController.loggedUser.role.name})."  rendered ="#{sessionController.logged}" ></h:outputLabel><h:commandLink value="Logout" action="#{connectionController.logout}"  rendered ="#{sessionController.logged}" ></h:commandLink>
-                    <h:outputLabel  value="Please login to continue."  rendered ="#{!sessionController.logged}" ></h:outputLabel>
-                </h:form>
-
-                Copyright © 2013 | All Rights Reserved  
+                Copyright © 2013 | All Rights Reserved
             </div>
         </div>
 

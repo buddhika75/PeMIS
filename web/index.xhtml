@@ -5,49 +5,93 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui">
 
-    <body>
+    <h:body>
 
         <ui:composition template="./resources/template/template_1.xhtml">
 
             <ui:define name="content">
 
 
-                <h:panelGrid columns="1" >
+                <h:panelGrid columns="1" style="min-width: 100%;background: red;">
 
-                    <h:panelGrid columns="2" >
-                        <h:panelGroup >
-                            <p:imageSwitch effect="">
-                                <h:graphicImage library="image" name="img1.jpg" />
-                                <h:graphicImage library="image" name="img1.jpg" />
-                            </p:imageSwitch>
+                    <h:panelGrid columns="2" styleClass="goodpadingandmargin" style="min-width: 100%;background: yellow;">
+                        <h:panelGroup styleClass="goodpadingandmargin">
+
+                            <h:graphicImage library="image" name="img1.jpg" />
+
                         </h:panelGroup>
-                    </h:panelGrid>
-                    <h:panelGrid columns="1" >
 
-                        <h:panelGrid columns="2">
 
-                            <h:panelGroup >
+                        <h:panelGroup >
+
+                            <h:panelGrid columns="1" styleClass="goodpadingandmargin">
+
+                                <h:panelGrid columns="2" styleClass="goodpadingandmargin">
+
+                                    <h:panelGroup >
+                                        <h:form>
+                                            <h:commandButton rendered="#{!languageBean.inSinhala}" value="#{labels.sinhala}" action="#{languageBean.changeToSinhala()}" styleClass="languagebutton" ></h:commandButton>
+                                            <h:commandButton rendered="#{!languageBean.inTamil}"  value="#{labels.tamil}"  action="#{languageBean.changeToTamil()}"  styleClass="languagebutton" ></h:commandButton>
+                                            <h:commandButton rendered="#{!languageBean.inEnglish}"  value="#{labels.english}"  action="#{languageBean.changeToEnglish()}"  styleClass="languagebutton" ></h:commandButton>
+                                        </h:form>
+                                    </h:panelGroup>
+                                </h:panelGrid>
+
+                            </h:panelGrid>
+
+                            <h:panelGrid columns="1" >
+                                <h:outputLabel value="Search" ></h:outputLabel>
+                                <h:inputText />
+                            </h:panelGrid>
+
+                            <h:panelGrid columns="1" >
                                 <h:form>
-                                    <h:commandButton rendered="#{!languageBean.inSinhala}" value="#{labels.sinhala}" action="#{languageBean.changeToSinhala()}" styleClass="languagebutton" ></h:commandButton>
-                                    <h:commandButton rendered="#{!languageBean.inTamil}"  value="#{labels.tamil}"  action="#{languageBean.changeToTamil()}"  styleClass="languagebutton" ></h:commandButton>
-                                    <h:commandButton rendered="#{!languageBean.inEnglish}"  value="#{labels.english}"  action="#{languageBean.changeToEnglish()}"  styleClass="languagebutton" ></h:commandButton>
+                                    <h:commandButton  value="#{labels.chatWithAPharmacologist}" action="#{languageBean.changeToSinhala()}" styleClass="languagebutton" ></h:commandButton>
                                 </h:form>
-                            </h:panelGroup>
-                        </h:panelGrid>
+                            </h:panelGrid>
+
+
+                        </h:panelGroup>
+
 
                     </h:panelGrid>
-                    <h:panelGrid columns="1" >
-                        <h:outputLabel value="Search" ></h:outputLabel>
 
-                    </h:panelGrid>
+                    <h:panelGroup >
+                        <h:outputText value="#{labels.indexPageWelcomHeading}"/>
+                        <h:outputText value="#{labels.indexPageWelcomeText}"/>
+                    </h:panelGroup>
 
-                </h:panelGrid>
+                    <h:panelGroup >
+
+                        Services
+
+                        Answering medicine related questions
+                        <ul>
+                            <li><h:outputText value="#{labels.Therapeutic indications</li>
+                                                       <li><h:outputText value="#{labels.Pharmacokinetics</li>
+                                                       <li><h:outputText value="#{labels.Adverse effects</li>
+                                                       <li><h:outputText value="#{labels.Drug use in pregnancy and lactation</li>
+                                                       <li><h:outputText value="#{labels.Drug-drug/drug-food interactions</li>
+                                                       <li><h:outputText value="#{labels.Drug regulation</li>
+                                                       <li><h:outputText value="#{labels.Drug dosing</li>
+                                                       <li><h:outputText value="#{labels.Monitoring drug therapy</li>
+                                                       <li><h:outputText value="#{labels.Drug availability</li>
+                                                       <li><h:outputText value="#{labels.Drug prices</li>
+                                                       <li><h:outputText value="#{labels.Pharmacoeconomics</li>
+                                                       <li><h:outputText value="#{labels.Efficiency and safety of herbal remedies</li>
+                                                       </ul>
+                                                       Hours of service – 8.30 a.m. to 4 p.m. from Monday to Friday (Except public holidays)
+
+
+                                                       </h:panelGroup>
+
+                                                       </h:panelGrid>
 
 
 
-            </ui:define>
+                                                       </ui:define>
 
-        </ui:composition>
+                                                       </ui:composition>
 
-    </body>
-</html>
+                                                       </h:body>
+                                                       </html>
