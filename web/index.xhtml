@@ -56,42 +56,49 @@
 
                     </h:panelGrid>
 
-                    <h:panelGroup >
+                    <h:panelGrid style="min-width: 100%; margin: 1px auto; padding: 1px; text-align: center;" columns="1" >
                         <h:outputText value="#{labels.indexPageWelcomHeading}"/>
                         <h:outputText value="#{labels.indexPageWelcomeText}"/>
-                    </h:panelGroup>
+                    </h:panelGrid>
 
-                    <h:panelGroup >
+                    <div style="background: magenta; min-width: 95%;">
 
-                        Services
-
-                        Answering medicine related questions
-                        <ul>
-                            <li><h:outputText value="#{labels.Therapeutic indications</li>
-                                                       <li><h:outputText value="#{labels.Pharmacokinetics</li>
-                                                       <li><h:outputText value="#{labels.Adverse effects</li>
-                                                       <li><h:outputText value="#{labels.Drug use in pregnancy and lactation</li>
-                                                       <li><h:outputText value="#{labels.Drug-drug/drug-food interactions</li>
-                                                       <li><h:outputText value="#{labels.Drug regulation</li>
-                                                       <li><h:outputText value="#{labels.Drug dosing</li>
-                                                       <li><h:outputText value="#{labels.Monitoring drug therapy</li>
-                                                       <li><h:outputText value="#{labels.Drug availability</li>
-                                                       <li><h:outputText value="#{labels.Drug prices</li>
-                                                       <li><h:outputText value="#{labels.Pharmacoeconomics</li>
-                                                       <li><h:outputText value="#{labels.Efficiency and safety of herbal remedies</li>
-                                                       </ul>
-                                                       Hours of service – 8.30 a.m. to 4 p.m. from Monday to Friday (Except public holidays)
+                    </div>
 
 
-                                                       </h:panelGroup>
+                </h:panelGrid>
 
-                                                       </h:panelGrid>
+                <h:panelGroup style="background: black;" >
+
+                    Services
+
+                    Answering medicine related questions
+
+                    <ul>
+                        <li></li>
+                        <li><h:outputText value="#{labels.Pharmacokinetics}"/></li>
+                        <li><h:outputText value="#{labels.AdverseEffects}"/></li>
+                        <li><h:outputText value="#{labels.DrugUseInPregnancyAndLactation}"/></li>
+                        <li><h:outputText value="#{labels.DrugDrugDrugFoodInteractions}"/></li>
+                        <li><h:outputText value="#{labels.DrugRegulation}"/></li>
+                        <li><h:outputText value="#{labels.DrugDosing}"/></li>
+                        <li><h:outputText value="#{labels.MonitoringDrugTherapy}"/></li>
+                        <li><h:outputText value="#{labels.DrugAvailability}"/></li>
+                        <li><h:outputText value="#{labels.DrugPrices}"/></li>
+                        <li><h:outputText value="#{labels.Pharmacoeconomics}"/></li>
+                        <li><h:outputText value="#{labels.EfficiencyAndSafetyOfHerbalRemedies}"/></li>
+                    </ul>
 
 
+                    Hours of service – 8.30 a.m. to 4 p.m. from Monday to Friday (Except public holidays)
 
-                                                       </ui:define>
 
-                                                       </ui:composition>
+                </h:panelGroup>
 
-                                                       </h:body>
-                                                       </html>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </h:body>
+</html>
