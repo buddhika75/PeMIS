@@ -30,6 +30,17 @@ body	{
     padding: 1px;
 }
 
+.heading1{
+    font-size: x-large;
+    color: rgb(60,0,0);
+}
+
+.heading2{
+    font-size: large;
+    color: rgb(30,0,0);
+
+}
+
 #header{
     width:100%;
     height: 85px;

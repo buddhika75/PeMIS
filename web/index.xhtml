@@ -12,9 +12,9 @@
             <ui:define name="content">
 
 
-                <h:panelGrid columns="1" style="min-width: 100%;background: red;">
+                <h:panelGrid columns="1" style="min-width: 100%;background: rgb(255,210,210);">
 
-                    <h:panelGrid columns="2" styleClass="goodpadingandmargin" style="min-width: 100%;background: yellow;">
+                    <h:panelGrid columns="2" styleClass="goodpadingandmargin" style="min-width: 100%;background: rgb(255,210,210);">
                         <h:panelGroup styleClass="goodpadingandmargin">
 
                             <h:graphicImage library="image" name="img1.jpg" />
@@ -56,14 +56,16 @@
 
                     </h:panelGrid>
 
-                    <h:panelGrid style="min-width: 100%; margin: 1px auto; padding: 1px; text-align: center;" columns="1" >
-                        <h:outputText value="#{labels.indexPageWelcomHeading}"/>
-                        <h:outputText value="#{labels.indexPageWelcomeText}"/>
-                    </h:panelGrid>
 
-                    <div style="background: magenta; min-width: 95%;">
+                    <h:panelGroup >
 
-                    </div>
+                        <h:panelGrid style="min-width: 100%; margin: 2px auto; padding: 10px; text-align: center; border: 2px solid; border-color: rgb(50,0,0);" columns="1" >
+                            <h:outputText styleClass="heading1" value="#{labels.indexPageWelcomHeading}"/>
+                            <h:outputText  styleClass="heading2"  value="#{labels.indexPageWelcomeText}"/>
+                        </h:panelGrid>
+
+                    </h:panelGroup >
+
 
 
                 </h:panelGrid>
