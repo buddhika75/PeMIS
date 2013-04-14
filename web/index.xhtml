@@ -12,9 +12,9 @@
             <ui:define name="content">
 
 
-                <h:panelGrid columns="1" style="min-width: 100%;background: rgb(255,210,210);">
+                <h:panelGrid columns="1" styleClass="contextBox">
 
-                    <h:panelGrid columns="2" styleClass="goodpadingandmargin" style="min-width: 100%;background: rgb(255,210,210);">
+                    <h:panelGrid columns="2" styleClass="goodpadingandmargin" >
                         <h:panelGroup styleClass="goodpadingandmargin">
 
                             <h:graphicImage library="image" name="img1.jpg" />
@@ -24,7 +24,7 @@
 
                         <h:panelGroup >
 
-                            <h:panelGrid columns="1" styleClass="goodpadingandmargin">
+                            <h:panelGroup styleClass="goodpadingandmargin">
 
                                 <h:panelGrid columns="2" styleClass="goodpadingandmargin">
 
@@ -37,18 +37,19 @@
                                     </h:panelGroup>
                                 </h:panelGrid>
 
-                            </h:panelGrid>
+                            </h:panelGroup>
 
-                            <h:panelGrid columns="1" >
-                                <h:outputLabel value="Search" ></h:outputLabel>
-                                <h:inputText />
-                            </h:panelGrid>
 
-                            <h:panelGrid columns="1" >
+                            <div class="searchBox" >
+                                <h:outputLabel value="Search" styleClass="searchTxt" ></h:outputLabel>
+                                <h:inputText styleClass="searchTxt" ></h:inputText>
+                            </div>
+
+                            <div  >
                                 <h:form>
-                                    <h:commandButton  value="#{labels.chatWithAPharmacologist}" action="#{languageBean.changeToSinhala()}" styleClass="languagebutton" ></h:commandButton>
+                                    <h:commandButton  value="#{labels.chatWithAPharmacologist}" action="#{languageBean.changeToSinhala()}" styleClass="chatbutton" ></h:commandButton>
                                 </h:form>
-                            </h:panelGrid>
+                            </div>
 
 
                         </h:panelGroup>
@@ -57,24 +58,65 @@
                     </h:panelGrid>
 
 
-                    <h:panelGroup >
+                    <div >
 
-                        <h:panelGrid style="min-width: 100%; margin: 2px auto; padding: 10px; text-align: center; border: 2px solid; border-color: rgb(50,0,0);" columns="1" >
+                        <h:panelGrid id="welcomeBox" >
                             <h:outputText styleClass="heading1" value="#{labels.indexPageWelcomHeading}"/>
                             <h:outputText  styleClass="heading2"  value="#{labels.indexPageWelcomeText}"/>
                         </h:panelGrid>
 
-                    </h:panelGroup >
+                    </div >
 
+                    <div >
+                        <div id="services1" >
+                            <h:outputText value="#{labels.Services}"/>
+                            <h:outputText value="#{labels.AnsweringMedicineRelatedQuestions}"/>
+                            <ul>
+                                <li></li>
+                                <li><h:outputText value="#{labels.Pharmacokinetics}"/></li>
+                                <li><h:outputText value="#{labels.AdverseEffects}"/></li>
+                                <li><h:outputText value="#{labels.DrugUseInPregnancyAndLactation}"/></li>
+                                <li><h:outputText value="#{labels.DrugDrugDrugFoodInteractions}"/></li>
+                                <li><h:outputText value="#{labels.DrugRegulation}"/></li>
+                                <li><h:outputText value="#{labels.DrugDosing}"/></li>
+                                <li><h:outputText value="#{labels.MonitoringDrugTherapy}"/></li>
+                                <li><h:outputText value="#{labels.DrugAvailability}"/></li>
+                                <li><h:outputText value="#{labels.DrugPrices}"/></li>
+                                <li><h:outputText value="#{labels.Pharmacoeconomics}"/></li>
+                                <li><h:outputText value="#{labels.EfficiencyAndSafetyOfHerbalRemedies}"/></li>
+                            </ul>
+                            <h:outputText value="#{labels.HoursOfService}"/>
+                        </div>
+                        <div id="services2" >
+                            <h:outputText value="#{labels.Services}"/>
+                            <h:outputText value="#{labels.AnsweringMedicineRelatedQuestions}"/>
+                            <ul>
+                                <li></li>
+                                <li><h:outputText value="#{labels.Pharmacokinetics}"/></li>
+                                <li><h:outputText value="#{labels.AdverseEffects}"/></li>
+                                <li><h:outputText value="#{labels.DrugUseInPregnancyAndLactation}"/></li>
+                                <li><h:outputText value="#{labels.DrugDrugDrugFoodInteractions}"/></li>
+                                <li><h:outputText value="#{labels.DrugRegulation}"/></li>
+                                <li><h:outputText value="#{labels.DrugDosing}"/></li>
+                                <li><h:outputText value="#{labels.MonitoringDrugTherapy}"/></li>
+                                <li><h:outputText value="#{labels.DrugAvailability}"/></li>
+                                <li><h:outputText value="#{labels.DrugPrices}"/></li>
+                                <li><h:outputText value="#{labels.Pharmacoeconomics}"/></li>
+                                <li><h:outputText value="#{labels.EfficiencyAndSafetyOfHerbalRemedies}"/></li>
+                            </ul>
+                            <h:outputText value="#{labels.HoursOfService}"/>
+                        </div>
+                    </div >
 
 
                 </h:panelGrid>
 
                 <h:panelGroup style="background: black;" >
 
-                    <h:outputText value="#{labels.services}"/>
+                    <h:outputText value="#{labels.Services}"/>
 
-                    <h:outputText value="#{labels.answeringMedicineRelatedQuestions}"/>
+                    <h:outputText value="#{labels.AnsweringMedicineRelatedQuestions}"/>
+
 
                     <ul>
                         <li></li>
@@ -92,7 +134,7 @@
                     </ul>
 
 
-                    Hours of service – 8.30 a.m. to 4 p.m. from Monday to Friday (Except public holidays)
+                    <h:outputText value="#{labels.HoursOfService}"/>
 
 
                 </h:panelGroup>
