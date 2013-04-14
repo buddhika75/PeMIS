@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:body>
+
+        <ui:composition template="./resources/template/template_1.xhtml">
+
+            <ui:define name="content">
+
+
+                <h:outputStylesheet library="css" name="contentStyle.css" />
+
+
+                <table >
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h:graphicImage library="image" name="img1.jpg" />
+
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h:form>
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <h:commandButton rendered="#{!languageBean.inSinhala}" value="#{labels.sinhala}" action="#{languageBean.changeToSinhala()}" styleClass="languagebutton" ></h:commandButton>
+                                                    </td>
+                                                    <td>
+                                                        <h:commandButton rendered="#{!languageBean.inTamil}"  value="#{labels.tamil}"  action="#{languageBean.changeToTamil()}"  styleClass="languagebutton" ></h:commandButton>
+                                                    </td>
+                                                    <td>
+                                                        <h:commandButton rendered="#{!languageBean.inEnglish}"  value="#{labels.english}"  action="#{languageBean.changeToEnglish()}"  styleClass="languagebutton" ></h:commandButton>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                        </h:form>
+
+
+
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td >
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        <h:form>
+                                            <h:outputLabel value="Search" ></h:outputLabel>
+                                            <h:inputText />
+                                        </h:form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        <h:form>
+                                            <h:commandButton  value="#{labels.chatWithAPharmacologist}" action="#{languageBean.changeToSinhala()}" styleClass="languagebutton" ></h:commandButton>
+                                        </h:form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <h:outputText styleClass="heading1" value="#{labels.indexPageWelcomHeading}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <h:outputText  styleClass="heading2"  value="#{labels.indexPageWelcomeText}"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </ui:define>
+
+        </ui:composition>
+
+    </h:body>
+</html>

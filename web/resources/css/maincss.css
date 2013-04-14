@@ -33,11 +33,13 @@ body	{
 .heading1{
     font-size: x-large;
     color: rgb(60,0,0);
+    margin:50px;
 }
 
 .heading2{
     font-size: large;
     color: rgb(30,0,0);
+    margin: 50px;
 
 }
 
@@ -70,8 +72,7 @@ body	{
 .topbutton{
     font-family : "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
     text-align : center;
-    min-width: 240px;
-    max-width: 240px;
+    min-width: 150px;
     max-height: 30px;
     min-height: 30px;
     background: rgb(153,0,0);
@@ -85,14 +86,14 @@ body	{
 
 .topbutton:hover {
     color: rgb(255,240,0);
-    font-weight: bolder;
+    background: rgb(253,0,0);
 }
 
 .languagebutton{
     font-family : "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
     text-align : center;
-    min-width: 240px;
-    max-width: 240px;
+/*    min-width: 350px;
+    max-width: 350px;*/
     max-height: 50px;
     min-height: 50px;
     background: rgb(153,0,0);
@@ -106,7 +107,7 @@ body	{
 
 .languagebutton:hover {
     color: rgb(255,240,0);
-    font-weight: bolder;
+    background: rgb(253,0,0);
 }
 
 .chatbutton{

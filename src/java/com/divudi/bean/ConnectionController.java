@@ -106,8 +106,6 @@ public class ConnectionController implements Serializable {
         this.sexFacade = sexFacade;
     }
 
-    
-    
     public WebUserRole getNewRole() {
         return newRole;
     }
@@ -116,9 +114,6 @@ public class ConnectionController implements Serializable {
         this.newRole = newRole;
     }
 
-    
-    
-    
     public ConnectionController() {
     }
 
@@ -220,7 +215,7 @@ public class ConnectionController implements Serializable {
         addingRole = new WebUserRole();
         addingRole.setName("Administrator");
         rFacade.create(addingRole);
-        adminRole=addingRole;
+        adminRole = addingRole;
 
         addingRole = new WebUserRole();
         addingRole.setName("Doctor");
@@ -230,24 +225,24 @@ public class ConnectionController implements Serializable {
         addingRole.setName("Nurse");
         rFacade.create(addingRole);
 
-        Institution addingIns=new Institution();
-        addingIns.setName(userName+ " Hospital");
+        Institution addingIns = new Institution();
+        addingIns.setName(userName + " Hospital");
         institutionFacade.create(addingIns);
 
         Sex s = new Sex();
         s.setName("Male");
         getSexFacade().create(s);
-        
-        s= new Sex();
+
+        s = new Sex();
         s.setName("Female");
         getSexFacade().create(s);
-        
-        s=new Sex();
+
+        s = new Sex();
         s.setName("Other");
         getSexFacade().create(s);
-        
-        
-        
+
+
+
         user.setName(HOSecurity.encrypt(userName));
         user.setWebUserPassword(HOSecurity.hash(passord));
         user.setWebUserPerson(person);
@@ -267,7 +262,7 @@ public class ConnectionController implements Serializable {
         if (newPassword.trim().equals("")) {
             JsfUtil.addErrorMessage("Plese enter a password");
             return "";
-        }        
+        }
         if (!userNameAvailable(newUserName)) {
             JsfUtil.addErrorMessage("User name already Exists. Plese enter another user name");
             return "";
@@ -276,7 +271,7 @@ public class ConnectionController implements Serializable {
             JsfUtil.addErrorMessage("Password and Re-entered password are not maching");
             return "";
         }
-        if(newRole==null){
+        if (newRole == null) {
             JsfUtil.addErrorMessage("Please select a role");
             return "";
         }
@@ -284,7 +279,7 @@ public class ConnectionController implements Serializable {
         person.setName(newPersonName);
         person.setInstitution(sessionController.getLoggedUser().getInstitution());
         pFacade.create(person);
-        
+
         WebUser user = new WebUser();
         user.setName(HOSecurity.encrypt(newUserName));
         user.setWebUserPassword(HOSecurity.hash(newPassword));
@@ -420,6 +415,10 @@ public class ConnectionController implements Serializable {
 
     public void setCurrent(WebUser current) {
         this.current = current;
+        if (current != null) {
+            setCurrentPerson(current.getWebUserPerson());
+        } else {
+        }
     }
 
     public WebUserFacade getEjbFacade() {
