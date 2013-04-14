@@ -45,17 +45,18 @@
 
             </div>
             <div id="nav-main">
-                <h:commandButton value="#{labels.home}" class="topbutton">
-                </h:commandButton>
-                <h:commandButton value="#{labels.public}" class="topbutton">
-                </h:commandButton>
-                <h:commandButton value="#{labels.healthProfessionals}" class="topbutton">
-                </h:commandButton>
-                <h:commandButton value="#{labels.aboutUs}" class="topbutton">
-                </h:commandButton>
-                <h:commandButton value="#{labels.contactUs}" class="topbutton">
-                </h:commandButton>
-
+                <h:form>
+                    <h:commandButton value="#{labels.home}" class="topbutton">
+                    </h:commandButton>
+                    <h:commandButton value="#{labels.public}" class="topbutton">
+                    </h:commandButton>
+                    <h:commandButton value="#{labels.healthProfessionals}" class="topbutton">
+                    </h:commandButton>
+                    <h:commandButton value="#{labels.aboutUs}" class="topbutton" action="about_us">
+                    </h:commandButton>
+                    <h:commandButton value="#{labels.contactUs}" class="topbutton" action="contact_us">
+                    </h:commandButton>
+                </h:form>
 
             </div>
             <div id="content">

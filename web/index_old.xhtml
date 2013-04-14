@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:body>
+
+        <ui:composition template="./resources/template/template_1.xhtml">
+
+            <ui:define name="content">
+
+
+                <h:panelGrid columns="1" styleClass="contextBox">
+
+                    <h:panelGrid columns="2" styleClass="goodpadingandmargin" >
+                        <h:panelGroup styleClass="goodpadingandmargin">
+
+                            <h:graphicImage library="image" name="img1.jpg" />
+
+                        </h:panelGroup>
+
+
+                        <h:panelGroup >
+
+                            <h:panelGroup styleClass="goodpadingandmargin">
+
+                                <h:panelGrid columns="2" styleClass="goodpadingandmargin">
+
+                                    <h:panelGroup >
+                                        <h:form>
+                                            <h:commandButton rendered="#{!languageBean.inSinhala}" value="#{labels.sinhala}" action="#{languageBean.changeToSinhala()}" styleClass="languagebutton" ></h:commandButton>
+                                            <h:commandButton rendered="#{!languageBean.inTamil}"  value="#{labels.tamil}"  action="#{languageBean.changeToTamil()}"  styleClass="languagebutton" ></h:commandButton>
+                                            <h:commandButton rendered="#{!languageBean.inEnglish}"  value="#{labels.english}"  action="#{languageBean.changeToEnglish()}"  styleClass="languagebutton" ></h:commandButton>
+                                        </h:form>
+                                    </h:panelGroup>
+                                </h:panelGrid>
+
+                            </h:panelGroup>
+
+
+                            <div class="searchBox" >
+                                <h:outputLabel value="Search" styleClass="searchTxt" ></h:outputLabel>
+                                <h:inputText styleClass="searchTxt" ></h:inputText>
+                            </div>
+
+                            <div  >
+                                <h:form>
+                                    <h:commandButton  value="#{labels.chatWithAPharmacologist}" action="#{languageBean.changeToSinhala()}" styleClass="chatbutton" ></h:commandButton>
+                                </h:form>
+                            </div>
+
+
+                        </h:panelGroup>
+
+
+                    </h:panelGrid>
+
+
+                    <div >
+
+                        <h:panelGrid id="welcomeBox" >
+                            <h:outputText styleClass="heading1" value="#{labels.indexPageWelcomHeading}"/>
+                            <h:outputText  styleClass="heading2"  value="#{labels.indexPageWelcomeText}"/>
+                        </h:panelGrid>
+
+                    </div >
+
+                    <div >
+                        <div id="services1" >
+                            <h:outputText value="#{labels.Services}"/>
+                            <h:outputText value="#{labels.AnsweringMedicineRelatedQuestions}"/>
+                            <ul>
+                                <li></li>
+                                <li><h:outputText value="#{labels.Pharmacokinetics}"/></li>
+                                <li><h:outputText value="#{labels.AdverseEffects}"/></li>
+                                <li><h:outputText value="#{labels.DrugUseInPregnancyAndLactation}"/></li>
+                                <li><h:outputText value="#{labels.DrugDrugDrugFoodInteractions}"/></li>
+                                <li><h:outputText value="#{labels.DrugRegulation}"/></li>
+                                <li><h:outputText value="#{labels.DrugDosing}"/></li>
+                                <li><h:outputText value="#{labels.MonitoringDrugTherapy}"/></li>
+                                <li><h:outputText value="#{labels.DrugAvailability}"/></li>
+                                <li><h:outputText value="#{labels.DrugPrices}"/></li>
+                                <li><h:outputText value="#{labels.Pharmacoeconomics}"/></li>
+                                <li><h:outputText value="#{labels.EfficiencyAndSafetyOfHerbalRemedies}"/></li>
+                            </ul>
+                            <h:outputText value="#{labels.HoursOfService}"/>
+                        </div>
+                        <div id="services2" >
+                            <h:outputText value="#{labels.Services}"/>
+                            <h:outputText value="#{labels.AnsweringMedicineRelatedQuestions}"/>
+                            <ul>
+                                <li></li>
+                                <li><h:outputText value="#{labels.Pharmacokinetics}"/></li>
+                                <li><h:outputText value="#{labels.AdverseEffects}"/></li>
+                                <li><h:outputText value="#{labels.DrugUseInPregnancyAndLactation}"/></li>
+                                <li><h:outputText value="#{labels.DrugDrugDrugFoodInteractions}"/></li>
+                                <li><h:outputText value="#{labels.DrugRegulation}"/></li>
+                                <li><h:outputText value="#{labels.DrugDosing}"/></li>
+                                <li><h:outputText value="#{labels.MonitoringDrugTherapy}"/></li>
+                                <li><h:outputText value="#{labels.DrugAvailability}"/></li>
+                                <li><h:outputText value="#{labels.DrugPrices}"/></li>
+                                <li><h:outputText value="#{labels.Pharmacoeconomics}"/></li>
+                                <li><h:outputText value="#{labels.EfficiencyAndSafetyOfHerbalRemedies}"/></li>
+                            </ul>
+                            <h:outputText value="#{labels.HoursOfService}"/>
+                        </div>
+                    </div >
+
+
+                </h:panelGrid>
+
+                <h:panelGroup style="background: black;" >
+
+                    <h:outputText value="#{labels.Services}"/>
+
+                    <h:outputText value="#{labels.AnsweringMedicineRelatedQuestions}"/>
+
+
+                    <ul>
+                        <li></li>
+                        <li><h:outputText value="#{labels.Pharmacokinetics}"/></li>
+                        <li><h:outputText value="#{labels.AdverseEffects}"/></li>
+                        <li><h:outputText value="#{labels.DrugUseInPregnancyAndLactation}"/></li>
+                        <li><h:outputText value="#{labels.DrugDrugDrugFoodInteractions}"/></li>
+                        <li><h:outputText value="#{labels.DrugRegulation}"/></li>
+                        <li><h:outputText value="#{labels.DrugDosing}"/></li>
+                        <li><h:outputText value="#{labels.MonitoringDrugTherapy}"/></li>
+                        <li><h:outputText value="#{labels.DrugAvailability}"/></li>
+                        <li><h:outputText value="#{labels.DrugPrices}"/></li>
+                        <li><h:outputText value="#{labels.Pharmacoeconomics}"/></li>
+                        <li><h:outputText value="#{labels.EfficiencyAndSafetyOfHerbalRemedies}"/></li>
+                    </ul>
+
+
+                    <h:outputText value="#{labels.HoursOfService}"/>
+
+
+                </h:panelGroup>
+
+
+            </ui:define>
+
+        </ui:composition>
+
+    </h:body>
+</html>
