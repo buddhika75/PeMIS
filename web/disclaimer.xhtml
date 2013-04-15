@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./resources/template/template_1.xhtml">
+
+            <ui:define name="content">
+               
+                
+                <h:outputStylesheet library="css" name="contentStyle.css" />
+
+                
+                <table >
+                    <tr>
+                        <td>
+                            <div class="fancyBox"  >
+                                <h:outputLabel value="#{labels.profDis}" styleClass="boxTopic" />
+                                <hr/>
+                                <h:outputLabel value="#{labels.profDisP1}" styleClass="boxText" /><br/>
+                                <h:outputLabel value="#{labels.profDisP2}" styleClass="boxText" /><br/>
+                                <h:outputLabel value="#{labels.profDisP3}" styleClass="boxText" /><br/>
+                            </div>                          
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="fancyBox"  >
+                                <h:outputLabel value="#{labels.publicDis}" styleClass="boxTopic" />
+                                <hr/>
+                                <h:outputLabel value="#{labels.publicDisP1}" styleClass="boxText" /><br/>
+                            </div>                          
+                        </td>
+                    </tr>
+                </table>
+                
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

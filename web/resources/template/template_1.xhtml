@@ -17,10 +17,10 @@
         <div id="container">
             <div id="header" >
 
-                <div class="headerblocks" style="max-width: 110px;">
+                <div class="headerblocks" style="max-width: 80px;">
                     <h:graphicImage id="pelogo" library="image" name="pelogo.png" ></h:graphicImage>
                 </div>
-                <div class="headerblocks" style="min-width:340px;" >
+                <div class="headerblocks" style="min-width:200px;" >
                     <div class="headingdiv">
                         <h:outputLabel value="#{labels.fomFullName}" class="headerfont"/>
                     </div>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="headerblocks" style="max-width: 110px;">
-                    <h:graphicImage id="rxlogo" library="image" name="rx.png" ></h:graphicImage>
+                    <h:graphicImage id="rxlogo" library="image" name="pemis_logo.jpg" ></h:graphicImage>
                 </div>
                 <div class="headerblocks" style="max-width: 800px; text-align: center;" >
                     <div class="headingdiv" >
@@ -46,11 +46,11 @@
             </div>
             <div id="nav-main">
                 <h:form>
-                    <h:commandButton value="#{labels.home}" class="topbutton">
+                    <h:commandButton value="#{labels.home}" class="topbutton" action="index">
                     </h:commandButton>
-                    <h:commandButton value="#{labels.public}" class="topbutton">
+                    <h:commandButton value="#{labels.public}" class="topbutton" action="public">
                     </h:commandButton>
-                    <h:commandButton value="#{labels.healthProfessionals}" class="topbutton">
+                    <h:commandButton value="#{labels.healthProfessionals}" class="topbutton" action="prof">
                     </h:commandButton>
                     <h:commandButton value="#{labels.aboutUs}" class="topbutton" action="about_us">
                     </h:commandButton>
@@ -65,6 +65,23 @@
             </div>
 
             <div id="nav-supp">
+                <hr/>
+                <h:form>
+                    &nsbp;|&nsbp;
+                    <h:commandLink value="#{labels.disclaimer}" class="bottombutton" action="disclaimer">
+                    </h:commandLink>
+                    &nsbp;|&nsbp;
+                    <h:commandLink value="#{labels.privacyStatement}" class="bottombutton" action="privacy">
+                    </h:commandLink>
+                    &nsbp;|&nsbp;
+                    <h:commandLink value="#{labels.siteMap}" class="bottombutton" action="site_map">
+                    </h:commandLink>
+                    &nsbp;|&nsbp;
+                    <h:commandLink value="#{labels.socialNetworking}" class="bottombutton" action="social">
+                    </h:commandLink>
+                    &nsbp;|&nsbp;
+                </h:form>                    
+                <hr/>
                 Copyright © 2013 | All Rights Reserved
             </div>
         </div>
