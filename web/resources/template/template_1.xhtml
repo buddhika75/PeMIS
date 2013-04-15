@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8' ?> 
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -17,10 +17,10 @@
         <div id="container">
             <div id="header" >
 
-                <div class="headerblocks" style="max-width: 110px;">
+                <div class="headerblocks" style="max-width: 80px;">
                     <h:graphicImage id="pelogo" library="image" name="pelogo.png" ></h:graphicImage>
                 </div>
-                <div class="headerblocks" style="min-width:340px;" >
+                <div class="headerblocks" style="min-width:200px;" >
                     <div class="headingdiv">
                         <h:outputLabel value="#{labels.fomFullName}" class="headerfont"/>
                     </div>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="headerblocks" style="max-width: 110px;">
-                    <h:graphicImage id="rxlogo" library="image" name="rx.png" ></h:graphicImage>
+                    <h:graphicImage id="rxlogo" library="image" name="pemis_logo.jpg" ></h:graphicImage>
                 </div>
                 <div class="headerblocks" style="max-width: 800px; text-align: center;" >
                     <div class="headingdiv" >
@@ -45,17 +45,18 @@
 
             </div>
             <div id="nav-main">
-                <h:commandButton value="#{labels.home}" class="topbutton">
-                </h:commandButton>
-                <h:commandButton value="#{labels.public}" class="topbutton">
-                </h:commandButton>
-                <h:commandButton value="#{labels.healthProfessionals}" class="topbutton">
-                </h:commandButton>
-                <h:commandButton value="#{labels.aboutUs}" class="topbutton">
-                </h:commandButton>
-                <h:commandButton value="#{labels.contactUs}" class="topbutton">
-                </h:commandButton>
-
+                <h:form>
+                    <h:commandButton value="#{labels.home}" class="topbutton" action="index">
+                    </h:commandButton>
+                    <h:commandButton value="#{labels.public}" class="topbutton" action="public">
+                    </h:commandButton>
+                    <h:commandButton value="#{labels.healthProfessionals}" class="topbutton" action="prof">
+                    </h:commandButton>
+                    <h:commandButton value="#{labels.aboutUs}" class="topbutton" action="about_us">
+                    </h:commandButton>
+                    <h:commandButton value="#{labels.contactUs}" class="topbutton" action="contact_us">
+                    </h:commandButton>
+                </h:form>
 
             </div>
             <div id="content">
@@ -64,12 +65,24 @@
             </div>
 
             <div id="nav-supp">
+                <hr/>
                 <h:form>
-                    <h:outputLabel  value="You are logged as #{sessionController.loggedUser.webUserPerson.name}&nbsp;(#{sessionController.loggedUser.role.name})."  rendered ="#{sessionController.logged}" ></h:outputLabel><h:commandLink value="Logout" action="#{connectionController.logout}"  rendered ="#{sessionController.logged}" ></h:commandLink>
-                    <h:outputLabel  value="Please login to continue."  rendered ="#{!sessionController.logged}" ></h:outputLabel>
-                </h:form>
-
-                Copyright © 2013 | All Rights Reserved  
+                    &nsbp;|&nsbp;
+                    <h:commandLink value="#{labels.disclaimer}" class="bottombutton" action="disclaimer">
+                    </h:commandLink>
+                    &nsbp;|&nsbp;
+                    <h:commandLink value="#{labels.privacyStatement}" class="bottombutton" action="privacy">
+                    </h:commandLink>
+                    &nsbp;|&nsbp;
+                    <h:commandLink value="#{labels.siteMap}" class="bottombutton" action="site_map">
+                    </h:commandLink>
+                    &nsbp;|&nsbp;
+                    <h:commandLink value="#{labels.socialNetworking}" class="bottombutton" action="social">
+                    </h:commandLink>
+                    &nsbp;|&nsbp;
+                </h:form>                    
+                <hr/>
+                Copyright © 2013 | All Rights Reserved
             </div>
         </div>
 

@@ -17,6 +17,32 @@ body	{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ada5a4', endColorstr='#fcfcfc',GradientType=0 ); /* IE6-9 */
 
 }
+
+.goodpadingandmargin{
+    padding: 5px;
+    margin: 5px auto !important;
+}
+
+.indeximg{
+    width: 200px;
+    height: 200px;
+    margin: 1px auto !important;
+    padding: 1px;
+}
+
+.heading1{
+    font-size: x-large;
+    color: rgb(60,0,0);
+    margin:50px;
+}
+
+.heading2{
+    font-size: large;
+    color: rgb(30,0,0);
+    margin: 50px;
+
+}
+
 #header{
     width:100%;
     height: 85px;
@@ -46,11 +72,10 @@ body	{
 .topbutton{
     font-family : "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
     text-align : center;
-    min-width: 240px;
-    max-width: 240px;
+    min-width: 150px;
     max-height: 30px;
     min-height: 30px;
-    background: rgb(153,0,0); 
+    background: rgb(153,0,0);
     border: 0px;
     margin: 0px;
     padding: 1px;
@@ -61,20 +86,39 @@ body	{
 
 .topbutton:hover {
     color: rgb(255,240,0);
-    font-weight: bolder;
+    background: rgb(253,0,0);
 }
+
+.bottombutton{
+    font-family : "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+    text-align : center;
+    min-width: 150px;
+    max-height: 30px;
+    min-height: 30px;
+    border: 0px;
+    margin: 0px;
+    padding: 1px;
+    font-size: medium;
+    color: rgb(55,10,10);
+    overflow: hidden;
+}
+
+.bottombutton:hover {
+    color: rgb(255,100,100);
+}
+
 
 .languagebutton{
     font-family : "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
     text-align : center;
-    min-width: 240px;
-    max-width: 240px;
-    max-height: 30px;
-    min-height: 30px;
-    background: rgb(153,0,0); 
-    border: 0px;
-    margin: 0px;
-    padding: 1px;
+/*    min-width: 350px;
+    max-width: 350px;*/
+    max-height: 50px;
+    min-height: 50px;
+    background: rgb(153,0,0);
+    border: 1px;
+    margin: 10px;
+    padding: 10px;
     font-size: larger;
     color: rgb(255,240,240);
     overflow: hidden;
@@ -82,7 +126,7 @@ body	{
 
 .languagebutton:hover {
     color: rgb(255,240,0);
-    font-weight: bolder;
+    background: rgb(253,0,0);
 }
 
 .chatbutton{
@@ -92,7 +136,7 @@ body	{
     max-width: 240px;
     max-height: 30px;
     min-height: 30px;
-    background: rgb(153,0,0); 
+    background: rgb(153,0,0);
     border: 0px;
     margin: 0px;
     padding: 1px;
@@ -127,7 +171,7 @@ body	{
 #rxlogo{
     max-height:  70px;
     max-width: 70px;
-    opacity: .2;
+    opacity: .9;
 }
 .headingdiv{
     padding: 0px;
@@ -139,7 +183,7 @@ body	{
     /*text-shadow: 10px 10px 5px #888;*/
     font-family: Verdana, Geneva, sans-serif;
     /*text-shadow: 2px 2px rgb(250,200,200);*/
-    font-size: x-large;
+    font-size: medium;
     font-weight: bolder;
     padding: 10px;
     margin: 10px;
@@ -162,20 +206,20 @@ body	{
 
 h1, h2, h3  {
     padding : 0.5em 0;
-    font-family : Arial, Helvetica, sans-serif; 
+    font-family : Arial, Helvetica, sans-serif;
     font-weight : normal;
     letter-spacing: -1px;
 }
 h1 {
-    font-size : 140%; 
+    font-size : 140%;
     color : #505050;
 }
 h2 {
-    font-size : 130%; 
+    font-size : 130%;
     color : #505050;
 }
 h3 {
-    font-size : 120%; 
+    font-size : 120%;
     color : #505050;
 }
 p  {
@@ -239,7 +283,7 @@ img, img a {
     padding : 10px;
     margin : auto;
     border-top : 1px solid #cfcfcf;
-    font-size : 120%; 
+    font-size : 120%;
 }
 #content-right  {
     float: right;
@@ -256,7 +300,7 @@ img, img a {
     padding-top : 10px;
     margin-top : 10px;
     border-top : 1px solid #cfcfcf;
-    font-size : 120%; 
+    font-size : 120%;
 }
 #content-right p {
     padding-top : 10px;
@@ -270,17 +314,17 @@ img, img a {
 #nav-main  {
     /*float : left;*/
     width : 100%;
-    background :    rgb(153,0,0); 
+    background :    rgb(153,0,0);
     /*url(image/header.jpg);*/
-/*    border-bottom : 1px solid #a6aba4;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: #a6aba4;*/
+    /*    border-bottom : 1px solid #a6aba4;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: #a6aba4;*/
     max-height:30px;
     min-width: calc(100% - 15px);
     min-width: -webkit-calc(100% - 15px);
     padding: 1px;
-        
+
 }
 h1{
     color:#fff;

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./resources/template/template_1.xhtml">
+
+            <ui:define name="content">
+                <h:outputStylesheet library="css" name="contentStyle.css" />
+
+                <table>
+                    <tr>
+                        <td>
+                            <div class="fancyBox" >
+                                <h:outputLabel value="#{labels.aboutUsIntro}" class="boxTopic"/><br/>
+
+                            </div>
+
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="fancyBox" style="text-align: left;" >
+                                <hr/>
+                                <h:outputLabel value="#{labels.dofIntro}" class="boxTopic"/><br/>
+                                <hr/>
+                                <h:outputLabel value="#{labels.dofName1}"  styleClass="boxText"/><br/>
+                                <h:outputLabel value="#{labels.dofQual1}"  styleClass="boxText"/><br/>
+                                <h:outputLink value="#{labels.dofEmailLink1}" >
+                                    <h:outputLabel value="#{labels.dofEmail1}"  styleClass="boxText"/><br/>
+                                </h:outputLink>
+                                <hr/>
+                                <h:outputLabel value="#{labels.dofName2}"  styleClass="boxText"/><br/>
+                                <h:outputLabel value="#{labels.dofQual2}"  styleClass="boxText"/><br/>
+                                <h:outputLink value="#{labels.dofEmailLink2}" >
+                                    <h:outputLabel value="#{labels.dofEmail2}"  styleClass="boxText"/><br/>
+                                </h:outputLink>
+                                <hr/>
+                                <h:outputLabel value="#{labels.dofName3}"  styleClass="boxText"/><br/>
+                                <h:outputLabel value="#{labels.dofQual3}"  styleClass="boxText"/><br/>
+                                <h:outputLink value="#{labels.dofEmailLink3}" >
+                                    <h:outputLabel value="#{labels.dofEmail3}"  styleClass="boxText"/><br/>
+                                </h:outputLink>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="fancyBox" style="text-align: left;" >
+                                <hr/>
+                                <h:outputLabel value="#{labels.bmifIntro}" class="boxTopic"/><br/>
+                                <hr/>
+                                <h:outputLabel value="#{labels.bmiName1}"  styleClass="boxText"/><br/>
+                                <h:outputLabel value="#{labels.bmiQual1}"  styleClass="boxText"/><br/>
+                                <h:outputLink value="#{labels.bmiEmailLink1}" >
+                                    <h:outputLabel value="#{labels.bmiEmail1}"  styleClass="boxText"/><br/>
+                                </h:outputLink>
+                                <hr/>
+                                <h:outputLabel value="#{labels.bmiName2}"  styleClass="boxText"/><br/>
+                                <h:outputLabel value="#{labels.bmiQual2}"  styleClass="boxText"/><br/>
+                                <h:outputLink value="#{labels.bmiEmailLink2}" >
+                                    <h:outputLabel value="#{labels.bmiEmail2}"  styleClass="boxText"/><br/>
+                                </h:outputLink>
+                                <hr/>
+                                <h:outputLabel value="#{labels.bmiName3}"  styleClass="boxText"/><br/>
+                                <h:outputLabel value="#{labels.bmiQual3}"  styleClass="boxText"/><br/>
+                                <h:outputLink value="#{labels.bmiEmailLink3}" >
+                                    <h:outputLabel value="#{labels.bmiEmail3}"  styleClass="boxText"/><br/>
+                                </h:outputLink>
+                                <hr/>
+                                <h:outputLabel value="#{labels.bmiName4}"  styleClass="boxText"/><br/>
+                                <h:outputLabel value="#{labels.bmiQual4}"  styleClass="boxText"/><br/>
+                                <h:outputLink value="#{labels.bmiEmailLink4}" >
+                                    <h:outputLabel value="#{labels.bmiEmail4}"  styleClass="boxText"/><br/>
+                                </h:outputLink>
+
+                                <hr/>
+                                <h:outputLabel value="#{labels.bmiName5}"  styleClass="boxText"/><br/>
+                                <h:outputLabel value="#{labels.bmiQual5}"  styleClass="boxText"/><br/>
+                                <h:outputLink value="#{labels.bmiEmailLink5}" >
+                                    <h:outputLabel value="#{labels.bmiEmail5}"  styleClass="boxText"/><br/>
+                                </h:outputLink>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="fancyBox" style="text-align: left;" >
+                                <hr/>
+                                <h:outputLabel value="#{labels.tecfIntro}" class="boxTopic"/>  <br/> 
+                                <hr/>
+                                <h:outputLabel value="#{labels.tecName1}"   styleClass="boxText"/><br/>     
+                                <h:outputLink value="#{labels.tecEmailLink1}" >
+                                    <h:outputLabel value="#{labels.tecEmail1}"  styleClass="boxText"/><br/>
+                                </h:outputLink>
+                                <hr/>
+                                <h:outputLabel value="#{labels.tecName2}"   styleClass="boxText"/><br/>     
+                                <h:outputLink value="#{labels.tecEmailLink2}" >
+                                    <h:outputLabel value="#{labels.tecEmail2}"  styleClass="boxText"/><br/>
+                                </h:outputLink>
+                                <hr/>
+                                <h:outputLabel value="#{labels.tecName3}"   styleClass="boxText"/><br/>     
+                                <h:outputLink value="#{labels.tecEmailLink3}" >
+                                    <h:outputLabel value="#{labels.tecEmail3}"  styleClass="boxText"/><br/>
+                                </h:outputLink>
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
