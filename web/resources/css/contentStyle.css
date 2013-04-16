@@ -84,3 +84,12 @@ ul li{
     line-height: 2.3;
 
 }
+.boxTextLeft{
+    font-family: georgia, serif;
+    color: #A60000;
+    font-size: 12px;
+    text-align: left;
+    word-spacing: 2.8pt;
+    line-height: 2.3;
+
+}

@@ -10,24 +10,27 @@
 
             <ui:define name="content">
 
-                
+
                 <h:outputStylesheet library="css" name="contentStyle.css" />
 
-                
+
                 <table >
                     <tr>
                         <td>
                             <div class="fancyBox"  >
                                 <h:outputLabel value="#{labels.privacyStatement}" styleClass="boxTopic" />
                                 <hr/>
-                                <h:outputLabel value="#{labels.privacyStatementP1}" styleClass="boxText" /><br/>
-                                <h:outputLabel value="#{labels.privacyStatementP2}" styleClass="boxText" /><br/>
-                                <h:outputLabel value="#{labels.privacyStatementP3}" styleClass="boxText" /><br/>
+                                <div style="text-align: left;">
+                                     <h:outputLabel value="#{labels.privacyStatementP1}" styleClass="boxText" /><br/>
+                                    <h:outputLabel value="#{labels.privacyStatementP2}" styleClass="boxText" /><br/>
+                                    <h:outputLabel value="#{labels.privacyStatementP3}" styleClass="boxText" /><br/>
+                                    <h:outputLabel value="#{labels.privacyStatementP4}" styleClass="boxText" /><br/>
+                                </div>
                             </div>                          
                         </td>
                     </tr>
                 </table>
-                
+
             </ui:define>
 
         </ui:composition>
