@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
 
     <h:body>
 
@@ -23,7 +24,14 @@
 
                     <tr>
                         <td>
-                            <h:graphicImage library="image" name="img1.jpg" />
+                            <div>
+                                <p:imageSwitch effect="fade">
+                                    <h:graphicImage library="image" name="img1.jpg" style="max-height: 300px; max-width: 400px; min-height: 300px; min-width: 500px; margin: 20px; padding: 20px;" />
+                                    <h:graphicImage library="image" name="img3.jpg" style="max-height: 300px; max-width: 400px; min-height: 300px; min-width:500px; margin: 20px; padding: 20px;" />
+                                    <h:graphicImage library="image" name="img2.jpg" style="max-height: 300px; max-width: 400px; min-height: 300px; min-width: 500px; margin: 20px; padding: 20px;" />
+                                </p:imageSwitch>
+
+                            </div>
 
                         </td>
                         <td>
@@ -87,12 +95,15 @@
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <h:outputText styleClass="heading1" value="#{labels.indexPageWelcomHeading}"/>
+                            <div class="fancyBox"  >
+                                <h:outputText styleClass="heading1" value="#{labels.indexPageWelcomHeading}"/><br/>
+                                <h:outputText  styleClass="heading2"  value="#{labels.indexPageWelcomeText}"/>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3">
-                            <h:outputText  styleClass="heading2"  value="#{labels.indexPageWelcomeText}"/>
+
                         </td>
                     </tr>
 
@@ -107,25 +118,38 @@
                         <td colspan="2">
                             <table>
                                 <tr>
-                                    <td width="50%">
+                                    <td colspan="2">
                                         <div class="fancyBox"  >
-                                            <h:outputText value="#{labels.services}"/>
-                                            <br/>
-                                            <h:outputText value="#{labels.answeringMedicineRelatedQuestions}"/>
-                                            <ul>
-                                                <li><h:outputText value="#{labels.pharmacokinetics}"/></li>
-                                                <li><h:outputText value="#{labels.adverseEffects}"/></li>
-                                                <li><h:outputText value="#{labels.drugUseInPregnancyAndLactation}"/></li>
-                                                <li><h:outputText value="#{labels.drugDrugDrugFoodInteractions}"/></li>
-                                                <li><h:outputText value="#{labels.drugRegulation}"/></li>
-                                                <li><h:outputText value="#{labels.drugDosing}"/></li>
-                                                <li><h:outputText value="#{labels.monitoringDrugTherapy}"/></li>
-                                                <li><h:outputText value="#{labels.drugAvailability}"/></li>
-                                                <li><h:outputText value="#{labels.drugPrices}"/></li>
-                                                <li><h:outputText value="#{labels.pharmacoeconomics}"/></li>
-                                                <li><h:outputText value="#{labels.efficiencyAndSafetyOfHerbalRemedies}"/></li>
-                                            </ul>
-                                            <h:outputText value="#{labels.hoursOfService}"/>
+                                            <h:outputText value="#{labels.services}" styleClass="heading1"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+
+
+
+                                        <div class="fancyBox"  >
+
+
+                                            <div style="text-align: left;">
+                                                <h:outputText value="#{labels.answeringMedicineRelatedQuestions}" style="text-align: left;"/>
+                                                <ul>
+                                                    <li><h:outputText value="#{labels.therapeuticIndications}"/></li>
+                                                    <li><h:outputText value="#{labels.pharmacokinetics}"/></li>
+                                                    <li><h:outputText value="#{labels.adverseEffects}"/></li>
+                                                    <li><h:outputText value="#{labels.drugUseInPregnancyAndLactation}"/></li>
+                                                    <li><h:outputText value="#{labels.drugDrugDrugFoodInteractions}"/></li>
+                                                    <li><h:outputText value="#{labels.drugRegulation}"/></li>
+                                                    <li><h:outputText value="#{labels.drugDosing}"/></li>
+                                                    <li><h:outputText value="#{labels.monitoringDrugTherapy}"/></li>
+                                                    <li><h:outputText value="#{labels.drugAvailability}"/></li>
+                                                    <li><h:outputText value="#{labels.drugPrices}"/></li>
+                                                    <li><h:outputText value="#{labels.pharmacoeconomics}"/></li>
+                                                    <li><h:outputText value="#{labels.efficiencyAndSafetyOfHerbalRemedies}"/></li>
+                                                </ul>
+                                                <h:outputText value="#{labels.hoursOfService}"/>
+                                            </div>
                                         </div>
                                     </td>
                                     <td style="vertical-align: text-top;">
@@ -142,10 +166,10 @@
                                             <tr>
                                                 <td>
                                                     <div class="fancyBox" >
-
-                                                        <h:outputText value="#{labels.weCanBeContactedBySeveralMethods}"/>
-                                                        <h:commandButton  value="#{labels.chatWithAPharmacologist}" action="#{languageBean.changeToSinhala()}" styleClass="languagebutton" ></h:commandButton>
-
+                                                        <h:form>
+                                                            <h:outputText value="#{labels.weCanBeContactedBySeveralMethods}"/><br/>
+                                                            <h:commandButton  value="#{labels.contactUs}" action="contact_us" styleClass="languagebutton" ></h:commandButton>
+                                                        </h:form>
 
                                                     </div>
 

@@ -22,7 +22,7 @@
                 </div>
                 <div class="headerblocks" style="min-width:200px;" >
                     <div class="headingdiv">
-                        <h:outputLabel value="#{labels.fomFullName}" class="headerfont"/>
+                        <h:outputLabel value="#{labels.fomFullName}" class="headerfontL"/>
                     </div>
                     <div class="headingdiv">
                         <h:outputLabel value="#{labels.peradeniya}" class="headerfont"/>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="headerblocks" style="max-width: 800px; text-align: center;" >
                     <div class="headingdiv" >
-                        <h:outputLabel value="#{labels.pemis}" class="headerfont"/><br/>
+                        <h:outputLabel value="#{labels.pemis}" class="headerfontL"/><br/>
                         <h:outputLabel value="#{labels.pemisFullName}" class="headerfont"/>
                     </div>
                 </div>
@@ -48,12 +48,14 @@
                 <h:form>
                     <h:commandButton value="#{labels.home}" class="topbutton" action="index">
                     </h:commandButton>
+                    <h:commandButton value="#{labels.aboutUs}" class="topbutton" action="about_us">
+                    </h:commandButton>
+                    
                     <h:commandButton value="#{labels.public}" class="topbutton" action="public">
                     </h:commandButton>
                     <h:commandButton value="#{labels.healthProfessionals}" class="topbutton" action="prof">
                     </h:commandButton>
-                    <h:commandButton value="#{labels.aboutUs}" class="topbutton" action="about_us">
-                    </h:commandButton>
+                    
                     <h:commandButton value="#{labels.contactUs}" class="topbutton" action="contact_us">
                     </h:commandButton>
                 </h:form>
