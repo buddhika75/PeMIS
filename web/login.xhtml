@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+
+
+        <ui:composition template="./resources/template/template_1.xhtml">
+
+            <ui:define name="content">
+
+
+                <h:outputStylesheet library="css" name="contentStyle.css" />
+
+
+
+                <h:form>
+
+
+
+                    <div class="fancyBox">
+                        <h:panelGroup rendered ="#{sessionController.logged}" >
+
+
+
+                            <table>
+
+                                <tr>
+                                    <td>
+                                        <h:commandButton disabled="#{!sessionController.userAdmin}" value="Add new user"  action="add_new_user" />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <h:commandButton value="Change Password" action="change_password"  />
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <h:commandButton value="Add article" action="#{articleController.addNewArticle()}" />
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                        </h:panelGroup>
+                        <h:panelGroup rendered ="#{!sessionController.logged}" >
+                            <p:panel header="Please login" id="loginbox">
+                                <h:panelGrid columns="2" >
+                                    <h:panelGroup >
+                                        <h:graphicImage  library="image" name="lock.png" />
+                                    </h:panelGroup>
+                                    <h:panelGroup >
+                                        <h:form>
+                                            <h:panelGrid columns="2">
+
+                                                <h:outputLabel value="Username" ></h:outputLabel>
+                                                <h:inputText autocomplete="off"  value="#{connectionController.userName}" ></h:inputText>
+                                                <h:outputLabel value="Password" ></h:outputLabel>
+                                                <h:inputSecret value="#{connectionController.passord }" ></h:inputSecret>
+                                                <h:outputLabel value="Password" ></h:outputLabel>
+                                                <h:commandButton value="Login" action="#{connectionController.loginAction}" ></h:commandButton>
+
+                                            </h:panelGrid>
+                                        </h:form>
+                                    </h:panelGroup>
+
+                                </h:panelGrid>
+                            </p:panel>
+                        </h:panelGroup>                    
+                    </div>
+
+
+
+
+                </h:form>
+
+
+            </ui:define>
+
+        </ui:composition>
+
+
+
+    </body>
+
+
+</html>

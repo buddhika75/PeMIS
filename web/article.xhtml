@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./resources/template/template_1.xhtml">
+
+            <ui:define name="content">
+
+                <h:outputStylesheet library="css" name="contentStyle.css" />
+
+                <h:form>
+
+                    <div class="fancyBox" >
+
+                        <p:panel header="Adding Articles" id="pnlArticle">
+
+
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th>
+                                        Sinhala
+                                        <h:selectBooleanCheckbox value="#{articleController.current.inSinhala}" >
+                                            <f:ajax event="click" execute="pnlArticle" render="pnlArticle"/>
+                                        </h:selectBooleanCheckbox>
+                                    </th>
+                                    <th>
+                                        Tamil
+                                        <h:selectBooleanCheckbox value="#{articleController.current.inTamil}" >
+                                            <f:ajax event="click" execute="pnlArticle" render="pnlArticle"/>
+                                        </h:selectBooleanCheckbox>
+                                    </th>
+                                    <th>
+                                        English
+                                        <h:selectBooleanCheckbox value="#{articleController.current.inEnglish}" >
+                                            <f:ajax event="click" execute="pnlArticle" render="pnlArticle"/>
+                                        </h:selectBooleanCheckbox>
+
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Topic 
+                                    </td>
+                                    <td>
+                                        <h:inputText maxlength="250" value="#{articleController.current.topicInSinhala}" disabled="#{!articleController.current.inSinhala}" />
+                                    </td>
+                                    <td>
+                                        <h:inputText maxlength="250" value="#{articleController.current.topicInTamil}"  disabled="#{!articleController.current.inTamil}" />
+                                    </td>
+                                    <td>
+                                        <h:inputText maxlength="250" value="#{articleController.current.topicInEnglish}"  disabled="#{!articleController.current.inEnglish}" />
+                                    </td>
+                                </tr>
+
+                                
+                                <tr>
+                                    <td>
+                                        Lead
+                                    </td>
+                                    <td>
+                                        <h:inputTextarea  value="#{articleController.current.leadingInSinhala}" disabled="#{!articleController.current.inSinhala}" />
+                                    </td>
+                                    <td>
+                                        <h:inputTextarea  value="#{articleController.current.leadingInTamil}"  disabled="#{!articleController.current.inTamil}" />
+                                    </td>
+                                    <td>
+                                        <h:inputTextarea  value="#{articleController.current.leadingInEnglish}"  disabled="#{!articleController.current.inEnglish}" />
+                                    </td>
+                                </tr>                                
+                                
+                                
+                                <tr>
+                                    <td>
+                                        Full Article 
+                                    </td>
+                                    <td>
+                                        <h:inputTextarea  value="#{articleController.current.articleInSinhala }" disabled="#{!articleController.current.inSinhala}" />
+                                    </td>
+                                    <td>
+                                        <h:inputTextarea  value="#{articleController.current.articleInTamil}"  disabled="#{!articleController.current.inTamil}" />
+                                    </td>
+                                    <td>
+                                        <h:inputTextarea  value="#{articleController.current.articleInEnglish}"  disabled="#{!articleController.current.inEnglish}" />
+                                    </td>
+                                </tr>                                
+                                
+                                <tr>
+                                    <td colspan="4" >
+                                        <h:commandButton value="Save" action="#{articleController.saveSelected()}"/>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </p:panel>
+
+                    </div>
+                </h:form>
+
+
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
