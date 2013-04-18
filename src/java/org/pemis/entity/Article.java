@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
+import javax.persistence.Transient;
 
 /**
  *
@@ -43,6 +44,13 @@ public class Article implements Serializable {
     Boolean inSinhala;
     Boolean inTamil;
     Boolean inEnglish;
+    @Transient
+    String articleText;
+    @Transient
+    String articleTopic;
+    @Transient
+    String articleLead;
+    
     @Lob
     String articleInSinhala;
     @Lob
@@ -63,6 +71,32 @@ public class Article implements Serializable {
     Boolean forPublic;
     Boolean forProfessionals;
 
+    public String getArticleText() {
+        return articleText;
+    }
+
+    public void setArticleText(String articleText) {
+        this.articleText = articleText;
+    }
+
+    public String getArticleTopic() {
+        return articleTopic;
+    }
+
+    public void setArticleTopic(String articleTopic) {
+        this.articleTopic = articleTopic;
+    }
+
+    public String getArticleLead() {
+        return articleLead;
+    }
+
+    public void setArticleLead(String articleLead) {
+        this.articleLead = articleLead;
+    }
+
+    
+    
     public Boolean getForPublic() {
         return forPublic;
     }

@@ -59,7 +59,7 @@
                                     </td>
                                 </tr>
 
-                                
+
                                 <tr>
                                     <td>
                                         Lead
@@ -74,8 +74,8 @@
                                         <h:inputTextarea  value="#{articleController.current.leadingInEnglish}"  disabled="#{!articleController.current.inEnglish}" />
                                     </td>
                                 </tr>                                
-                                
-                                
+
+
                                 <tr>
                                     <td>
                                         Full Article 
@@ -90,9 +90,28 @@
                                         <h:inputTextarea  value="#{articleController.current.articleInEnglish}"  disabled="#{!articleController.current.inEnglish}" />
                                     </td>
                                 </tr>                                
-                                
+
                                 <tr>
-                                    <td colspan="4" >
+                                    <td>
+                                        For Public
+                                        <h:selectBooleanCheckbox value ="#{articleController.current.forPublic}" >
+
+                                        </h:selectBooleanCheckbox>
+                                    </td>
+                                    <td>
+                                        For Professionals
+                                        <h:selectBooleanCheckbox value ="#{articleController.current.forProfessionals}" >
+                                        </h:selectBooleanCheckbox>
+                                    </td>
+
+                                    <td>
+                                        Retire
+                                        <h:selectBooleanCheckbox value ="#{articleController.current.retired}" >
+                                        </h:selectBooleanCheckbox>
+                                    </td>
+
+
+                                    <td  >
                                         <h:commandButton value="Save" action="#{articleController.saveSelected()}"/>
                                     </td>
                                 </tr>

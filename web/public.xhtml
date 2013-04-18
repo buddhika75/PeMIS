@@ -1,14 +1,61 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
 
     <body>
 
         <ui:composition template="./resources/template/template_1.xhtml">
 
             <ui:define name="content">
-                Under Construction
+
+                <h:outputStylesheet library="css" name="contentStyle.css" />
+
+                <h:form>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="fancyBox" >
+                                    <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.public1.leadingInSinhala}"/>
+                                    <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.public1.leadingInTamil}"/>
+                                    <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.public1.leadingInEnglish}"/>
+                                    <h:commandLink value="Read more .." action="#{articleController.displayPublicArticle(1)}" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="fancyBox" >
+                                    <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.public2.leadingInSinhala}"/>
+                                    <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.public2.leadingInTamil}"/>
+                                    <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.public2.leadingInEnglish}"/>
+                                    <h:commandLink value="Read more .." action="#{articleController.displayPublicArticle(2)}" />
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="fancyBox" >
+                                    <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.public3.leadingInSinhala}"/>
+                                    <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.public3.leadingInTamil}"/>
+                                    <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.publ3c1.leadingInEnglish}"/>
+                                    <h:commandLink value="Read more .." action="#{articleController.displayPublicArticle(3)}" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="fancyBox" >
+                                    <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.public4.leadingInSinhala}"/>
+                                    <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.public4.leadingInTamil}"/>
+                                    <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.public4.leadingInEnglish}"/>
+                                    <h:commandLink value="Read more .." action="#{articleController.displayPublicArticle(4)}" />
+                                </div>
+
+                            </td>
+                        </tr>
+                    </table>
+
+                </h:form>
             </ui:define>
 
         </ui:composition>
