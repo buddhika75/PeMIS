@@ -7,6 +7,7 @@ package org.pemis.bean;
 import java.io.Serializable;
 import java.util.Locale;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 
 import javax.faces.context.FacesContext;
@@ -25,7 +26,19 @@ public class LanguageBean implements Serializable {
     Boolean inSinhala;
     Boolean inTamil;
     Boolean inEnglish;
+    @ManagedProperty(value="#{articleController}")
+    ArticleController articleController;
 
+    public ArticleController getArticleController() {
+        return articleController;
+    }
+
+    public void setArticleController(ArticleController articleController) {
+        this.articleController = articleController;
+    }
+
+    
+    
     public Boolean getInSinhala() {
         if (getLanguage().equals("si")) {
             inSinhala = Boolean.TRUE;
@@ -59,14 +72,23 @@ public class LanguageBean implements Serializable {
 
     public void changeToSinhala() {
         setLanguage("si");
+        nullArticles();
     }
 
+    public void nullArticles(){
+        getArticleController().setPublicNews(null);
+        getArticleController().setHealthNews(null);
+        
+    }
+    
     public void changeToTamil() {
         setLanguage("ta");
+        nullArticles();
     }
 
     public void changeToEnglish() {
         setLanguage("en");
+        nullArticles();
     }
     private Locale locale = FacesContext.getCurrentInstance().getViewRoot().getLocale();
 

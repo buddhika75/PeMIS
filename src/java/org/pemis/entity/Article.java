@@ -50,7 +50,6 @@ public class Article implements Serializable {
     String articleTopic;
     @Transient
     String articleLead;
-    
     @Lob
     String articleInSinhala;
     @Lob
@@ -63,14 +62,108 @@ public class Article implements Serializable {
     String leadingInTamil;
     @Lob
     String leadingInEnglish;
-
+    @Lob
+    String linkUrl;
+    Boolean linkOnly;
+    Boolean articleOnly;
     String topicInSinhala;
     String topicInEnglish;
     String topicInTamil;
-    
     Boolean forPublic;
     Boolean forProfessionals;
+    
+    Boolean pnews;
+    Boolean pfaq;
+    Boolean presource;
+    Boolean hnews;
+    Boolean hfaq;
+    Boolean hbull;
+    Boolean hresource;
 
+    public Boolean getPnews() {
+        return pnews;
+    }
+
+    public void setPnews(Boolean pnews) {
+        this.pnews = pnews;
+    }
+
+    public Boolean getPfaq() {
+        return pfaq;
+    }
+
+    public void setPfaq(Boolean pfaq) {
+        this.pfaq = pfaq;
+    }
+
+    public Boolean getPresource() {
+        return presource;
+    }
+
+    public void setPresource(Boolean presource) {
+        this.presource = presource;
+    }
+
+    public Boolean getHnews() {
+        return hnews;
+    }
+
+    public void setHnews(Boolean hnews) {
+        this.hnews = hnews;
+    }
+
+    public Boolean getHfaq() {
+        return hfaq;
+    }
+
+    public void setHfaq(Boolean hfaq) {
+        this.hfaq = hfaq;
+    }
+
+    public Boolean getHbull() {
+        return hbull;
+    }
+
+    public void setHbull(Boolean hbull) {
+        this.hbull = hbull;
+    }
+
+    public Boolean getHresource() {
+        return hresource;
+    }
+
+    public void setHresource(Boolean hresource) {
+        this.hresource = hresource;
+    }
+    
+    
+
+    public String getLinkUrl() {
+        return linkUrl;
+    }
+
+    public void setLinkUrl(String linkUrl) {
+        this.linkUrl = linkUrl;
+    }
+
+    public Boolean getLinkOnly() {
+        return linkOnly;
+    }
+
+    public void setLinkOnly(Boolean linkOnly) {
+        this.linkOnly = linkOnly;
+    }
+
+    public Boolean getArticleOnly() {
+        return articleOnly;
+    }
+
+    public void setArticleOnly(Boolean articleOnly) {
+        this.articleOnly = articleOnly;
+    }
+
+
+    
     public String getArticleText() {
         return articleText;
     }
@@ -95,8 +188,6 @@ public class Article implements Serializable {
         this.articleLead = articleLead;
     }
 
-    
-    
     public Boolean getForPublic() {
         return forPublic;
     }
@@ -112,8 +203,6 @@ public class Article implements Serializable {
     public void setForProfessionals(Boolean forProfessionals) {
         this.forProfessionals = forProfessionals;
     }
-    
-    
 
     public WebUser getCreater() {
         return creater;
@@ -274,9 +363,7 @@ public class Article implements Serializable {
     public void setTopicInTamil(String topicInTamil) {
         this.topicInTamil = topicInTamil;
     }
-    
-    
-    
+
     public Long getId() {
         return id;
     }

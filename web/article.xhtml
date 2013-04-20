@@ -91,26 +91,68 @@
                                     </td>
                                 </tr>                                
 
+
                                 <tr>
                                     <td>
-                                        For Public
-                                        <h:selectBooleanCheckbox value ="#{articleController.current.forPublic}" >
+                                        Link
+                                    </td>
+                                    <td colspan="3">
+                                        <h:inputTextarea  value="#{articleController.current.linkUrl}"  />
+                                    </td>
+                                </tr>                                     
 
+                                <tr>
+                                    <td>
+                                        Public News
+                                        <h:selectBooleanCheckbox value ="#{articleController.current.pnews}" >
                                         </h:selectBooleanCheckbox>
                                     </td>
                                     <td>
-                                        For Professionals
-                                        <h:selectBooleanCheckbox value ="#{articleController.current.forProfessionals}" >
+                                        Public FAQ
+                                        <h:selectBooleanCheckbox value ="#{articleController.current.pfaq}" >
                                         </h:selectBooleanCheckbox>
                                     </td>
 
                                     <td>
-                                        Retire
+                                        Public Resources
+                                        <h:selectBooleanCheckbox value ="#{articleController.current.presource}" >
+                                        </h:selectBooleanCheckbox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Professional News
+                                        <h:selectBooleanCheckbox value ="#{articleController.current.hnews}" >
+                                        </h:selectBooleanCheckbox>
+                                    </td>
+                                    <td>
+                                        Professional FAQ
+                                        <h:selectBooleanCheckbox value ="#{articleController.current.hfaq}" >
+                                        </h:selectBooleanCheckbox>
+                                    </td>
+
+                                    <td>
+                                        Health Bulletin
+                                        <h:selectBooleanCheckbox value ="#{articleController.current.hbull}" >
+                                        </h:selectBooleanCheckbox>
+                                    </td>
+                                    <td>
+                                        Professional Resources
+                                        <h:selectBooleanCheckbox value ="#{articleController.current.hresource}" >
+                                        </h:selectBooleanCheckbox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        A Link Only
+                                        <h:selectBooleanCheckbox value ="#{articleController.current.linkOnly}" >
+                                        </h:selectBooleanCheckbox>
+                                    </td>
+                                    <td>
+                                        Remove
                                         <h:selectBooleanCheckbox value ="#{articleController.current.retired}" >
                                         </h:selectBooleanCheckbox>
                                     </td>
-
-
                                     <td  >
                                         <h:commandButton value="Save" action="#{articleController.saveSelected()}"/>
                                     </td>

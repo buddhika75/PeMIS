@@ -17,8 +17,11 @@
 
                 <table >
                     <tr>
-                        <td>
-                            &nbsp;
+                        <td colspan="2">
+                            <div class="fancyBox"  >
+                                <h:outputText styleClass="heading1" value="#{labels.indexPageWelcomHeading}"/><br/>
+                                <h:outputText  styleClass="heading2"  value="#{labels.indexPageWelcomeText}"/>
+                            </div>
                         </td>
                     </tr>
 
@@ -26,9 +29,9 @@
                         <td>
                             <div>
                                 <p:imageSwitch effect="fade">
-                                    <h:graphicImage library="image" name="img1.jpg" style="max-height: 300px; max-width: 400px; min-height: 300px; min-width: 500px; margin: 20px; padding: 20px;" />
-                                    <h:graphicImage library="image" name="img3.jpg" style="max-height: 300px; max-width: 400px; min-height: 300px; min-width:500px; margin: 20px; padding: 20px;" />
-                                    <h:graphicImage library="image" name="img2.jpg" style="max-height: 300px; max-width: 400px; min-height: 300px; min-width: 500px; margin: 20px; padding: 20px;" />
+                                    <h:graphicImage library="image" name="img1.jpg" style="max-height: 300px; max-width: 600px; min-height: 300px; min-width: 600px; margin: 5px; padding: 5px;" />
+                                    <h:graphicImage library="image" name="img3.jpg" style="max-height: 300px; max-width: 600px; min-height: 300px; min-width:600px; margin: 5px; padding: 5px;" />
+                                    <h:graphicImage library="image" name="img2.jpg" style="max-height: 300px; max-width: 600px; min-height: 300px; min-width: 600px; margin: 5px; padding: 5px;" />
                                 </p:imageSwitch>
 
                             </div>
@@ -68,8 +71,9 @@
                                 <tr>
                                     <td >
                                         <h:form>
-                                            <h:outputLabel value="Search" ></h:outputLabel>
-                                            <h:inputText />
+                                            <h:outputLabel value="#{labels.search}" ></h:outputLabel>
+                                            <h:inputText value="#{articleController.selectText}" ></h:inputText>
+                                            <h:commandButton action="#{articleController.searchArticle}" value="#{labels.search}" />
                                         </h:form>
                                     </td>
                                 </tr>
@@ -80,9 +84,7 @@
                                 </tr>
                                 <tr>
                                     <td >
-                                        <h:form>
-                                            <h:commandButton  value="#{labels.chatWithAPharmacologist}" action="chat_public" styleClass="languagebutton" ></h:commandButton>
-                                        </h:form>
+
                                     </td>
                                 </tr>
                             </table>
@@ -93,14 +95,7 @@
                             &nbsp;
                         </td>
                     </tr>
-                    <tr>
-                        <td colspan="3">
-                            <div class="fancyBox"  >
-                                <h:outputText styleClass="heading1" value="#{labels.indexPageWelcomHeading}"/><br/>
-                                <h:outputText  styleClass="heading2"  value="#{labels.indexPageWelcomeText}"/>
-                            </div>
-                        </td>
-                    </tr>
+
                     <tr>
                         <td colspan="3">
 
@@ -136,17 +131,23 @@
                                                 <h:outputText value="#{labels.answeringMedicineRelatedQuestions}" style="text-align: left;"/>
                                                 <ul>
                                                     <li><h:outputText value="#{labels.therapeuticIndications}"/></li>
-                                                    <li><h:outputText value="#{labels.pharmacokinetics}"/></li>
+                                                    <h:panelGroup rendered="!#{!languageBean.inSinhala}" >
+                                                        <li><h:outputText value="#{labels.pharmacokinetics}"/></li>
+                                                    </h:panelGroup>
                                                     <li><h:outputText value="#{labels.adverseEffects}"/></li>
                                                     <li><h:outputText value="#{labels.drugUseInPregnancyAndLactation}"/></li>
                                                     <li><h:outputText value="#{labels.drugDrugDrugFoodInteractions}"/></li>
                                                     <li><h:outputText value="#{labels.drugRegulation}"/></li>
                                                     <li><h:outputText value="#{labels.drugDosing}"/></li>
-                                                    <li><h:outputText value="#{labels.monitoringDrugTherapy}"/></li>
-                                                    <li><h:outputText value="#{labels.drugAvailability}"/></li>
+                                                    <h:panelGroup rendered="!#{!languageBean.inSinhala}" >
+                                                        <li><h:outputText value="#{labels.monitoringDrugTherapy}"/></li>
+                                                        <li><h:outputText value="#{labels.drugAvailability}"/></li>
+                                                    </h:panelGroup>
                                                     <li><h:outputText value="#{labels.drugPrices}"/></li>
+                                                    <h:panelGroup rendered="!#{!languageBean.inSinhala}" >
                                                     <li><h:outputText value="#{labels.pharmacoeconomics}"/></li>
-                                                    <li><h:outputText value="#{labels.efficiencyAndSafetyOfHerbalRemedies}"/></li>
+                                                        <li><h:outputText value="#{labels.efficiencyAndSafetyOfHerbalRemedies}"/></li>
+                                                    </h:panelGroup>
                                                 </ul>
                                                 <h:outputText value="#{labels.hoursOfService}"/>
                                             </div>
@@ -169,6 +170,11 @@
                                                         <h:form>
                                                             <h:outputText value="#{labels.weCanBeContactedBySeveralMethods}"/><br/>
                                                             <h:commandButton  value="#{labels.contactUs}" action="contact_us" styleClass="languagebutton" ></h:commandButton>
+
+                                                        </h:form>
+
+                                                        <h:form>
+                                                            <h:commandButton  value="#{labels.chatWithAPharmacologist}" action="chat_public" styleClass="languagebutton" ></h:commandButton>
                                                         </h:form>
 
                                                     </div>

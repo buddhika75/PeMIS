@@ -17,93 +17,160 @@
 
         <f:view locale="#{languageBean.locale}" >
 
-            <div id="container">
-                <div id="header" >
 
-                    <div class="headerblocks" style="max-width: 80px;">
-                        <h:graphicImage id="pelogo" library="image" name="pelogo.png" ></h:graphicImage>
-                    </div>
-                    <div class="headerblocks" style="min-width:200px;" >
-                        <div class="headingdiv">
-                            <h:outputLabel value="#{labels.fomFullName}" class="headerfontL"/>
+            <table style="width: 100%;margin: 5px; border:0px;" >
+                <tr>
+                    <td>
+                        <table class="header">
+                            <tr>
+                                <td>
+                                    <h:graphicImage id="pelogo" library="image" name="pelogo.png" ></h:graphicImage>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h:outputLabel value="#{labels.fomFullName}" class="headerfontL"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h:outputLabel value="#{labels.peradeniya}" class="headerfont"/>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                                <td>
+                                    <div class="verticalline" >
+                                        &nbsp;
+                                    </div>
+                                </td>
+                                <td>
+                                    <h:graphicImage id="rxlogo" library="image" name="pemis_logo.jpg" ></h:graphicImage>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h:outputLabel value="#{labels.pemis}" class="headerfontL"/><br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h:outputLabel value="#{labels.pemisFullName}" class="headerfont"/>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <div id='cssmenu'>
+
+                            <ul>
+                                <li class='active'><h:link value="#{labels.home}" outcome="index" /></li>
+                                <li class='active'><h:link value="#{labels.aboutUs}" outcome="about_us" /></li>
+                                <li class='has-sub'><a href='#'><span>#{labels.public}</span></a>
+                                    <ul>
+                                        <li><h:link value="#{labels.news}" outcome="public_news" /></li>
+                                        <li><h:link value="#{labels.faq}" outcome="public_faq" /></li>
+                                        <li class='last'><h:link value="#{labels.resources}" outcome="public_resources" /></li>
+                                    </ul>
+                                </li>
+                                <li class='has-sub'><a href='#'><span>#{labels.healthProfessionals}</span></a>
+                                    <ul>
+                                        <li><a href='prof_news.xhtml'><span>#{labels.news}</span></a></li>
+                                        <li><a href='prof_faq.xhtml'><span>#{labels.faq}</span></a></li>
+                                        <li><a href='prof_bulletin.xhtml'><span>#{labels.bulletin}</span></a></li>
+                                        <li class='last'><a href='prof_bulletin.xhtml'><span>#{labels.resources}</span></a></li>
+                                    </ul>
+                                </li>                                
+                                <li class='last'><a href='contact_us.xhtml'><span>#{labels.contactUs}</span></a></li>
+                            </ul>
+
                         </div>
-                        <div class="headingdiv">
-                            <h:outputLabel value="#{labels.peradeniya}" class="headerfont"/>
-                        </div>
-                    </div>
-                    <div class="headerblocks" >
-                        <div class="verticalline" >
-                            &nbsp;
-                        </div>
-                    </div>
-                    <div class="headerblocks" style="max-width: 110px;">
-                        <h:graphicImage id="rxlogo" library="image" name="pemis_logo.jpg" ></h:graphicImage>
-                    </div>
-                    <div class="headerblocks" style="max-width: 800px; text-align: center;" >
-                        <div class="headingdiv" >
-                            <h:outputLabel value="#{labels.pemis}" class="headerfontL"/><br/>
-                            <h:outputLabel value="#{labels.pemisFullName}" class="headerfont"/>
-                        </div>
-                    </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <ui:insert name="content"   >
+                        </ui:insert>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
 
-                </div>
-                <div id="nav-main">
-                    <h:form>
-                        <h:commandButton value="#{labels.home}" class="topbutton" action="index">
-                        </h:commandButton>
-                        <h:commandButton value="#{labels.aboutUs}" class="topbutton" action="about_us">
-                        </h:commandButton>
+                        <table>
 
-                        <h:commandButton value="#{labels.public}" class="topbutton" action="public">
-                        </h:commandButton>
-                        <h:commandButton value="#{labels.healthProfessionals}" class="topbutton" action="prof">
-                        </h:commandButton>
+                            <tr>
 
-                        <h:commandButton value="#{labels.contactUs}" class="topbutton" action="contact_us">
-                        </h:commandButton>
-                    </h:form>
+                                <h:form>
 
-                </div>
-                <div id="content">
-                    <ui:insert name="content"   >
-                    </ui:insert>
-                </div>
+                                    <td>
+                                        &nsbp;|&nsbp;
+                                    </td>
+                                    <td>
+                                        <h:commandLink value="#{labels.disclaimer}" class="bottombutton" action="disclaimer">
+                                        </h:commandLink>
+                                    </td>
+                                    <td>
+                                        &nsbp;|&nsbp;
+                                    </td>
+                                    <td>
+                                        <h:commandLink value="#{labels.privacyStatement}" class="bottombutton" action="privacy">
+                                        </h:commandLink>
+                                    </td>
+                                    <td>
+                                        &nsbp;|&nsbp;
+                                    </td>
+                                    <td>
+                                        <h:commandLink value="#{labels.siteMap}" class="bottombutton" action="site_map">
+                                        </h:commandLink>
+                                    </td>
+                                    <td>
+                                        &nsbp;|&nsbp;
+                                    </td>
+                                    <td>
+                                        <h:commandLink value="#{labels.socialNetworking}" class="bottombutton" action="social">
+                                        </h:commandLink>
+                                    </td>
+                                    <td>
+                                        &nsbp;|&nsbp;
+                                    </td>
+                                    <td>
+                                        <h:panelGroup rendered="#{!sessionController.logged}" >
+                                            <h:commandLink value="Login" action="login" />
+                                        </h:panelGroup>
+                                        <h:panelGroup rendered="#{sessionController.logged}" >
+                                            <h:commandLink value="Admin page" action="login" />
+                                        </h:panelGroup>
+                                    </td>
+                                    <td>
+                                        &nsbp;|&nsbp;
+                                    </td>
+                                    <td>
+                                        Copyright © 2013 | All Rights Reserved by PeMIS
+                                    </td>
+                                    <td>
+                                        &nsbp;|&nsbp;
+                                    </td> 
+                                </h:form>
+                            </tr>
 
-                <div id="nav-supp">
+                        </table>
 
-                    <h:form>
-                        <hr/>
-                        &nsbp;|&nsbp;
-                        <h:commandLink value="#{labels.disclaimer}" class="bottombutton" action="disclaimer">
-                        </h:commandLink>
-                        &nsbp;|&nsbp;
-                        <h:commandLink value="#{labels.privacyStatement}" class="bottombutton" action="privacy">
-                        </h:commandLink>
-                        &nsbp;|&nsbp;
-                        <h:commandLink value="#{labels.siteMap}" class="bottombutton" action="site_map">
-                        </h:commandLink>
-                        &nsbp;|&nsbp;
-                        <h:commandLink value="#{labels.socialNetworking}" class="bottombutton" action="social">
-                        </h:commandLink>
-                        &nsbp;|&nsbp;
-                        <h:panelGroup rendered="#{!sessionController.logged}" >
-                            <h:commandLink value="Login" action="login" />
-                            &nsbp;|&nsbp;
-                        </h:panelGroup>
-                        <h:panelGroup rendered="#{sessionController.logged}" >
-                            <h:commandLink value="Log out" action="#{connectionController.logout()}" />
-                            &nsbp;|&nsbp;
-                        </h:panelGroup>
-                        <h:panelGroup rendered="#{sessionController.logged}" >
-                            <h:commandLink value="Admin page" action="login" />
-                            &nsbp;|&nsbp;
-                        </h:panelGroup>
-                        Copyright © 2013 | All Rights Reserved by PeMIS
-                        &nsbp;|&nsbp;
-                    </h:form>
 
-                </div>
-            </div>
+                    </td>
+                </tr>
+            </table>
+
+
 
         </f:view>
 

@@ -10,23 +10,11 @@
 
             <ui:define name="content">
 
-
-
-
                 <h:outputStylesheet library="css" name="contentStyle.css" />
 
                 <h:form>
 
                     <table>
-                        <tr>
-                            <td>
-                                <div class="fancyBoxLeft" >
-                                    <a href="resources/pdf/nl1.pdf" >Bulletin</a>
-                                </div>
-                            </td>
-
-                        </tr>
-
                         <tr>
                             <td>
                                 <div class="fancyBoxLeft" >
@@ -40,7 +28,7 @@
                                     <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.healthNews1.leadingInSinhala}"  styleClass="boxTextLeft"/>
                                     <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.healthNews1.leadingInTamil}"   styleClass="boxTextLeft"/>
                                     <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.healthNews1.leadingInEnglish}"   styleClass="boxTextLeft"/>
-                                    <h:commandLink value="Read more .." action="#{articleController.displayHealthNews()}" />
+                                    <h:commandLink value="Read more .." action="#{articleController.displayHealthNews(1)}" />
                                 </div>
                             </td>
                         </tr>
@@ -58,7 +46,7 @@
                                     <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.healthNews2.leadingInSinhala}"  styleClass="boxTextLeft"/>
                                     <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.healthNews2.leadingInTamil}"   styleClass="boxTextLeft"/>
                                     <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.healthNews2.leadingInEnglish}"   styleClass="boxTextLeft"/>
-                                    <h:commandLink value="Read more .." action="#{articleController.displayHealthNews()}" />
+                                    <h:commandLink value="Read more .." action="#{articleController.displayHealthNews(2) }" />
 
 
                                 </div>
@@ -67,11 +55,7 @@
                         </tr>
                     </table>
 
-                </h:form>             
-
-
-
-
+                </h:form>
             </ui:define>
 
         </ui:composition>

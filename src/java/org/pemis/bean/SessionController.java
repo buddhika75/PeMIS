@@ -10,6 +10,7 @@ package org.pemis.bean;
 import org.pemis.entity.WebUser;
 import org.pemis.entity.WebUserRole;
 import java.io.Serializable;
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -97,6 +98,11 @@ public class SessionController implements Serializable {
     public SessionController() {
     }
 
+    @PostConstruct
+    public void init(){
+        setLocaleCode("en");
+    }
+    
     public String getDefLocale() {
         defLocale = "en";
         if (getLoggedUser() != null) {
