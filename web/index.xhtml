@@ -131,7 +131,7 @@
                                                 <h:outputText value="#{labels.answeringMedicineRelatedQuestions}" style="text-align: left;"/>
                                                 <ul>
                                                     <li><h:outputText value="#{labels.therapeuticIndications}"/></li>
-                                                    <h:panelGroup rendered="!#{!languageBean.inSinhala}" >
+                                                    <h:panelGroup rendered="#{!languageBean.inSinhala}" >
                                                         <li><h:outputText value="#{labels.pharmacokinetics}"/></li>
                                                     </h:panelGroup>
                                                     <li><h:outputText value="#{labels.adverseEffects}"/></li>
@@ -139,12 +139,12 @@
                                                     <li><h:outputText value="#{labels.drugDrugDrugFoodInteractions}"/></li>
                                                     <li><h:outputText value="#{labels.drugRegulation}"/></li>
                                                     <li><h:outputText value="#{labels.drugDosing}"/></li>
-                                                    <h:panelGroup rendered="!#{!languageBean.inSinhala}" >
+                                                    <h:panelGroup rendered="#{!languageBean.inSinhala}" >
                                                         <li><h:outputText value="#{labels.monitoringDrugTherapy}"/></li>
                                                         <li><h:outputText value="#{labels.drugAvailability}"/></li>
                                                     </h:panelGroup>
                                                     <li><h:outputText value="#{labels.drugPrices}"/></li>
-                                                    <h:panelGroup rendered="!#{!languageBean.inSinhala}" >
+                                                    <h:panelGroup rendered="#{!languageBean.inSinhala}" >
                                                     <li><h:outputText value="#{labels.pharmacoeconomics}"/></li>
                                                         <li><h:outputText value="#{labels.efficiencyAndSafetyOfHerbalRemedies}"/></li>
                                                     </h:panelGroup>

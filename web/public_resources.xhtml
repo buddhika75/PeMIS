@@ -13,6 +13,10 @@
                 <h:outputStylesheet library="css" name="contentStyle.css" />
 
                 <h:form>
+                    
+                    <h:panelGroup rendered="#{articleController.publicResources.size()>0}" >
+
+
 
                     <table>
                         <tr>
@@ -55,6 +59,14 @@
                         </tr>
                     </table>
 
+                         </h:panelGroup>
+
+                    <h:panelGroup rendered="#{articleController.publicResources.size()==0}" >
+                        <div class="fancyBox" >
+                            <h:outputLabel styleClass="boxTopic" value="#{labels.underConstruction}" />
+                        </div>
+                    </h:panelGroup>
+                        
                 </h:form>
             </ui:define>
 
