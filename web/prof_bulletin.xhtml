@@ -28,32 +28,33 @@
 
                                         <br/>
 
-                                        <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.healthBull1.leadingInSinhala}"  styleClass="boxTextLeft"/>
-                                        <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.healthBull1.leadingInTamil}"   styleClass="boxTextLeft"/>
-                                        <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.healthBull1.leadingInEnglish}"   styleClass="boxTextLeft"/>
-                                        <h:commandLink value="Read more .." action="#{articleController.displayHealthBulletin(1)}" />
+
+                                        <a href="#{articleController.healthBull1.linkUrl}">#{labels.download}</a>
+
+
+
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="fancyBoxLeft" >
+                                    <h:panelGroup rendered="#{articleController.healthBull.size()>1}" >
+
+                                        <div class="fancyBoxLeft" >
 
 
-                                        <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.healthBull2.topicInSinhala}"  styleClass="boxTopic"/>
-                                        <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.healthBull2.topicInTamil}"  styleClass="boxTopic"/>
-                                        <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.healthBull2.topicInEnglish}" styleClass="boxTopic"/>
+                                            <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.healthBull2.topicInSinhala}"  styleClass="boxTopic"/>
+                                            <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.healthBull2.topicInTamil}"  styleClass="boxTopic"/>
+                                            <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.healthBull2.topicInEnglish}" styleClass="boxTopic"/>
 
-                                        <br/>
+                                            <br/>
 
-                                        <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.healthBull2.leadingInSinhala}"  styleClass="boxTextLeft"/>
-                                        <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.healthBull2.leadingInTamil}"   styleClass="boxTextLeft"/>
-                                        <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.healthBull2.leadingInEnglish}"   styleClass="boxTextLeft"/>
-                                        <h:commandLink value="Read more .." action="#{articleController.displayHealthBulletin(2) }" />
+                                            <a href="#{articleController.healthBull2.linkUrl }">#{labels.download}</a>
 
 
-                                    </div>
 
+                                        </div>
+                                    </h:panelGroup>
                                 </td>
                             </tr>
                         </table>
@@ -61,6 +62,7 @@
                     <h:panelGroup rendered="#{articleController.healthBull.size()==0}" >
                         <div class="fancyBox" >
                             <h:outputLabel styleClass="boxTopic" value="#{labels.underConstruction}" />
+                            <h:graphicImage library="image" name="under_construction.jpg" />
                         </div>
                     </h:panelGroup>
                 </h:form>

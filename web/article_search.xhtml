@@ -19,8 +19,11 @@
                 <h:form>
 
                     <div class="fancyBox">
+                        
+                        <h:inputText value="Search Articles for Editing" ></h:inputText>
+                        
                         <h:inputText value="#{articleController.selectText}" ></h:inputText>
-                        <h:commandButton action="#{articleController.searchArticle}" value="#{labels.search}" />
+                        <h:commandButton action="article_search" value="#{labels.search}" />
                         <p:dataTable value="#{articleController.searchedArticles}" var="sa" emptyMessage="#{labels.noArticlesFound}" >
                             <p:column >
                                 <h:outputLabel value="#{sa.topicInSinhala}" rendered="#{languageBean.inSinhala}" />
@@ -28,7 +31,7 @@
                                 <h:outputLabel value="#{sa.topicInEnglish}" rendered="#{languageBean.inEnglish}" />
                             </p:column>
                             <p:column >
-                                <h:commandButton value="View" action ="article_search" >
+                                <h:commandButton value="Edit" action ="article" >
                                     <f:setPropertyActionListener value="#{sa}" target="#{articleController.current}" />
                                 </h:commandButton>
                             </p:column>

@@ -84,19 +84,20 @@
                                 </li>
                                 <li class='has-sub'><a href='#'><span>#{labels.healthProfessionals}</span></a>
                                     <ul>
-                                        <li><a href='prof_news.xhtml'><span>#{labels.news}</span></a></li>
-                                        <li><a href='prof_faq.xhtml'><span>#{labels.faq}</span></a></li>
-                                        <li><a href='prof_bulletin.xhtml'><span>#{labels.bulletin}</span></a></li>
-                                        <li class='last'><a href='prof_bulletin.xhtml'><span>#{labels.resources}</span></a></li>
+                                        <li><h:link value="#{labels.news}" outcome="prof_news" /></li>
+                                        <li><h:link value="#{labels.faq}" outcome="prof_faq" /></li>
+                                        <li><h:link value="#{labels.bulletin}" outcome="prof_bulletin" /></li>
+                                        <li class='last'><h:link value="#{labels.resources}" outcome="prof_resources" /></li>
+
                                     </ul>
                                 </li>                                
-                                <li class='last'><a href='contact_us.xhtml'><span>#{labels.contactUs}</span></a></li>
+                                <li class='last'><h:link value="#{labels.contactUs}" outcome="contact_us" /></li>
                             </ul>
 
                         </div>
                     </td>
                 </tr>
-                
+
                 <tr>
                     <td>
                         <ui:insert name="content"   >

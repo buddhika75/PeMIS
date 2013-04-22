@@ -62,9 +62,10 @@
 
                     </h:panelGroup>
 
-                    <h:panelGroup rendered="#{articleController.healthResources.size()==0}" >
+                    <h:panelGroup rendered="#{articleController.healthFaq.size()==0}" >
                         <div class="fancyBox" >
                             <h:outputLabel styleClass="boxTopic" value="#{labels.underConstruction}" />
+                            <h:graphicImage library="image" name="under_construction.jpg" />
                         </div>
                     </h:panelGroup>
 

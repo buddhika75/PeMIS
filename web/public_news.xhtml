@@ -16,55 +16,61 @@
 
                     <h:panelGroup rendered="#{articleController.publicNews.size()>0}" >
 
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="fancyBoxLeft" >
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="fancyBoxLeft" >
 
-                                    <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.publicNews1.topicInSinhala}"  styleClass="boxTopic"/>
-                                    <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.publicNews1.topicInTamil}"  styleClass="boxTopic"/>
-                                    <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.publicNews1.topicInEnglish}" styleClass="boxTopic"/>
+                                        <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.publicNews1.topicInSinhala}"  styleClass="boxTopic"/>
+                                        <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.publicNews1.topicInTamil}"  styleClass="boxTopic"/>
+                                        <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.publicNews1.topicInEnglish}" styleClass="boxTopic"/>
 
-                                    <br/>
+                                        <br/>
 
-                                    <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.publicNews1.leadingInSinhala}"  styleClass="boxTextLeft"/>
-                                    <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.publicNews1.leadingInTamil}"   styleClass="boxTextLeft"/>
-                                    <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.publicNews1.leadingInEnglish}"   styleClass="boxTextLeft"/>
-                                    <h:commandLink value="Read more .." action="#{articleController.displayPublicNews(1)}" />
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="fancyBoxLeft" >
+                                        <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.publicNews1.leadingInSinhala}"  styleClass="boxTextLeft"/>
+                                        <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.publicNews1.leadingInTamil}"   styleClass="boxTextLeft"/>
+                                        <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.publicNews1.leadingInEnglish}"   styleClass="boxTextLeft"/>
 
 
-                                    <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.publicNews2.topicInSinhala}"  styleClass="boxTopic"/>
-                                    <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.publicNews2.topicInTamil}"  styleClass="boxTopic"/>
-                                    <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.publicNews2.topicInEnglish}" styleClass="boxTopic"/>
-
-                                    <br/>
-
-                                    <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.publicNews2.leadingInSinhala}"  styleClass="boxTextLeft"/>
-                                    <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.publicNews2.leadingInTamil}"   styleClass="boxTextLeft"/>
-                                    <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.publicNews2.leadingInEnglish}"   styleClass="boxTextLeft"/>
-                                    <h:commandLink value="Read more .." action="#{articleController.displayPublicNews(2)}" />
+                                        <a href="#{articleController.publicNews1.linkUrl }">#{labels.readMore}</a>
 
 
-                                </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="fancyBoxLeft" >
 
-                            </td>
-                        </tr>
-                    </table>
 
-                      </h:panelGroup>
+                                        <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.publicNews2.topicInSinhala}"  styleClass="boxTopic"/>
+                                        <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.publicNews2.topicInTamil}"  styleClass="boxTopic"/>
+                                        <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.publicNews2.topicInEnglish}" styleClass="boxTopic"/>
+
+                                        <br/>
+
+                                        <h:outputLabel rendered="#{languageBean.inSinhala}" value="#{articleController.publicNews2.leadingInSinhala}"  styleClass="boxTextLeft"/>
+                                        <h:outputLabel rendered="#{languageBean.inTamil}" value="#{articleController.publicNews2.leadingInTamil}"   styleClass="boxTextLeft"/>
+                                        <h:outputLabel rendered="#{languageBean.inEnglish}" value="#{articleController.publicNews2.leadingInEnglish}"   styleClass="boxTextLeft"/>
+
+                                        <a href="#{articleController.publicNews2.linkUrl }">#{labels.readMore}</a>
+
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </table>
+
+                    </h:panelGroup>
 
                     <h:panelGroup rendered="#{articleController.publicNews.size()==0}" >
                         <div class="fancyBox" >
                             <h:outputLabel styleClass="boxTopic" value="#{labels.underConstruction}" />
+                            <h:graphicImage library="image" name="under_construction.jpg" />
                         </div>
                     </h:panelGroup>
-                    
+
                 </h:form>
             </ui:define>
 

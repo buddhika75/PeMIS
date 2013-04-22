@@ -822,7 +822,7 @@ public final class ArticleController implements Serializable {
         current = new Article();
     }
 
-    public void saveSelected() {
+    public String saveSelected() {
         setPublicNews(null);
         setHealthNews(null);
         if (getCurrent() != null && getCurrent().getId() != null && getCurrent().getId() != 0) {
@@ -836,6 +836,7 @@ public final class ArticleController implements Serializable {
         }
         getItems();
         selectText = "";
+        return "article_search";
     }
 
     public void delete() {
